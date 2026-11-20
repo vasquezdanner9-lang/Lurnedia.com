@@ -228,7 +228,7 @@
             </a>
             <button type="button" onclick="cyclePhoneLesson()" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold text-xs sm:text-sm px-4 py-3 rounded-xl transition-all cursor-pointer">
               <span>Cambiar clase en el celular</span>
-              <span>📱</span>
+              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=80&q=80" alt="Móvil" class="w-4 h-4 rounded-sm object-cover" onerror="this.style.display='none'" />
             </button>
           </div>
 
@@ -334,7 +334,9 @@
                       class="w-full bg-[#111317] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl py-2 pl-3 pr-8 text-xs text-white placeholder-gray-500 focus:outline-none"
                     />
                     <button type="submit" aria-label="Buscar en cursos" class="absolute right-2 top-1/2 -translate-y-1/2 text-lurnedia-greenLight hover:text-white text-xs font-bold cursor-pointer">
-                      🔍
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
                     </button>
                   </form>
                   <div class="flex items-center justify-between text-[10px] text-gray-400 px-0.5">
@@ -546,9 +548,12 @@
         </div>
 
         <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl px-4 py-3 flex items-center gap-3 self-start lg:self-auto">
-          <div class="w-9 h-9 rounded-xl bg-lurnedia-greenDark/15 text-lurnedia-greenLight flex items-center justify-center font-bold text-base">
-            🕒
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=140&q=80"
+            alt="Horario de tarde"
+            class="w-10 h-10 rounded-xl object-cover border border-lurnedia-greenLight/40 shrink-0"
+            onerror="this.src='https://placehold.co/100x100/22C55E/08080A?text=LIVE'"
+          />
           <div>
             <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Franja Horaria Tarde</p>
             <p class="text-xs sm:text-sm font-bold text-white">Lunes a Sábado • 2:00 PM a 7:00 PM</p>
@@ -625,16 +630,26 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6 card-hover flex flex-col justify-between">
+        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden card-hover flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight">Ruta Carrera</span>
-              <span class="text-xs text-gray-400">14 cursos • 68 hrs</span>
+            <div class="h-36 w-full overflow-hidden border-b border-lurnedia-border bg-[#08080A]">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
+                alt="Full Stack Developer"
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/600x320/111317/4ADE80?text=Full+Stack'"
+              />
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Full Stack Developer con JavaScript & TypeScript</h3>
-            <p class="text-sm text-gray-400 mb-6">Domina React, Next.js, Node.js, bases de datos PostgreSQL y despliegue en la nube.</p>
+            <div class="p-6 pb-0">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight">Ruta Carrera</span>
+                <span class="text-xs text-gray-400">14 cursos • 68 hrs</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Full Stack Developer con JavaScript & TypeScript</h3>
+              <p class="text-sm text-gray-400 mb-6">Domina React, Next.js, Node.js, bases de datos PostgreSQL y despliegue en la nube.</p>
+            </div>
           </div>
-          <div>
+          <div class="p-6 pt-0">
             <div class="flex items-center gap-2 text-xs text-gray-400 mb-4">
               <span class="w-2 h-2 rounded-full bg-lurnedia-greenLight"></span>
               <span>Incluye 4 proyectos de portafolio</span>
@@ -645,19 +660,29 @@
           </div>
         </div>
 
-        <div class="bg-lurnedia-card border border-lurnedia-greenLight/40 rounded-2xl p-6 card-hover flex flex-col justify-between relative">
-          <div class="absolute -top-3 right-6 bg-lurnedia-gradient text-black text-[11px] font-extrabold px-3 py-0.5 rounded-full uppercase">
+        <div class="bg-lurnedia-card border border-lurnedia-greenLight/40 rounded-2xl overflow-hidden card-hover flex flex-col justify-between relative">
+          <div class="absolute top-3 right-3 bg-lurnedia-gradient text-black text-[11px] font-extrabold px-3 py-0.5 rounded-full uppercase z-10">
             Más demandada
           </div>
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight">Ruta IA</span>
-              <span class="text-xs text-gray-400">11 cursos • 52 hrs</span>
+            <div class="h-36 w-full overflow-hidden border-b border-lurnedia-border bg-[#08080A]">
+              <img
+                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=700&q=80"
+                alt="AI Engineer"
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/600x320/111317/4ADE80?text=AI+Engineer'"
+              />
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">AI Engineer & Aplicaciones con LLMs</h3>
-            <p class="text-sm text-gray-400 mb-6">Aprende Prompt Engineering avanzado, RAG, Fine-Tuning, LangChain y despliegue de modelos.</p>
+            <div class="p-6 pb-0">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight">Ruta IA</span>
+                <span class="text-xs text-gray-400">11 cursos • 52 hrs</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">AI Engineer & Aplicaciones con LLMs</h3>
+              <p class="text-sm text-gray-400 mb-6">Aprende Prompt Engineering avanzado, RAG, Fine-Tuning, LangChain y despliegue de modelos.</p>
+            </div>
           </div>
-          <div>
+          <div class="p-6 pt-0">
             <div class="flex items-center gap-2 text-xs text-gray-400 mb-4">
               <span class="w-2 h-2 rounded-full bg-lurnedia-greenLight"></span>
               <span>Certificación profesional incluida</span>
@@ -668,16 +693,26 @@
           </div>
         </div>
 
-        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6 card-hover flex flex-col justify-between">
+        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden card-hover flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight">Ruta Datos</span>
-              <span class="text-xs text-gray-400">12 cursos • 60 hrs</span>
+            <div class="h-36 w-full overflow-hidden border-b border-lurnedia-border bg-[#08080A]">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+                alt="Data Analyst"
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/600x320/111317/4ADE80?text=Data+Analyst'"
+              />
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Data Analyst & Business Intelligence</h3>
-            <p class="text-sm text-gray-400 mb-6">Transforma datos en decisiones estratégicas con SQL, Python, Pandas, Power BI y Tableau.</p>
+            <div class="p-6 pb-0">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight">Ruta Datos</span>
+                <span class="text-xs text-gray-400">12 cursos • 60 hrs</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Data Analyst & Business Intelligence</h3>
+              <p class="text-sm text-gray-400 mb-6">Transforma datos en decisiones estratégicas con SQL, Python, Pandas, Power BI y Tableau.</p>
+            </div>
           </div>
-          <div>
+          <div class="p-6 pt-0">
             <div class="flex items-center gap-2 text-xs text-gray-400 mb-4">
               <span class="w-2 h-2 rounded-full bg-lurnedia-greenLight"></span>
               <span>Casos reales de empresas tech</span>
@@ -921,7 +956,7 @@
                     onerror="this.src='https://placehold.co/80x80/22C55E/08080A?text=PD'"
                   />
                   <div class="min-w-0">
-                    <p class="text-xs font-bold text-white truncate">PurpleDoll lvl2 🏳️‍🌈</p>
+                    <p class="text-xs font-bold text-white truncate">PurpleDoll lvl2</p>
                     <p class="text-[11px] text-gray-400 truncate">@purpled... • <button type="button" onclick="toggleFollowBtn(this)" class="text-sky-400 hover:underline font-semibold cursor-pointer">Follow</button></p>
                   </div>
                 </div>
@@ -932,7 +967,7 @@
                 Todas las historias son diferentes y esta es la mía. Jamás imaginé lograr mis metas profesionales con las mejores condiciones.
               </p>
               <p class="text-xs text-gray-200 leading-relaxed mb-4">
-                Estudié y practiqué sin parar hasta que llegó la oportunidad. Conocí <span class="text-sky-400 font-medium">@lurnedia</span> y el resto es historia. Mil gracias por tanta guía 💚
+                Estudié y practiqué sin parar hasta que llegó la oportunidad. Conocí <span class="text-sky-400 font-medium">@lurnedia</span> y el resto es historia. Mil gracias por tanta guía.
               </p>
             </div>
 
@@ -967,7 +1002,7 @@
                     onerror="this.src='https://placehold.co/80x80/22C55E/08080A?text=CR'"
                   />
                   <div class="min-w-0">
-                    <p class="text-xs font-bold text-white truncate">Cris 💚</p>
+                    <p class="text-xs font-bold text-white truncate">Cris</p>
                     <p class="text-[11px] text-gray-400 truncate">@castca_ • <button type="button" onclick="toggleFollowBtn(this)" class="text-sky-400 hover:underline font-semibold cursor-pointer">Follow</button></p>
                   </div>
                 </div>
@@ -985,14 +1020,14 @@
                 <button type="button" onclick="togglePostLike(this, 1300, '1.3K')" class="inline-flex items-center gap-1 hover:text-pink-400 transition-colors cursor-pointer">
                   <span>♥</span> <span class="like-count font-semibold">1.3K</span>
                 </button>
-                <button type="button" onclick="openStoryReplies('Cris 💚', '@castca_')" class="inline-flex items-center gap-1 hover:text-sky-400 transition-colors cursor-pointer">
+                <button type="button" onclick="openStoryReplies('Cris', '@castca_')" class="inline-flex items-center gap-1 hover:text-sky-400 transition-colors cursor-pointer">
                   <span>💬</span> <span>Reply</span>
                 </button>
                 <button type="button" onclick="copyPostLink(this)" class="inline-flex items-center gap-1 hover:text-lurnedia-greenLight transition-colors cursor-pointer">
                   <span>🔗</span> <span>Copy...</span>
                 </button>
               </div>
-              <button type="button" onclick="openStoryReplies('Cris 💚', '@castca_')" class="w-full py-2 rounded-xl border border-lurnedia-border hover:border-lurnedia-greenLight text-xs font-bold text-sky-400 transition-colors cursor-pointer">
+              <button type="button" onclick="openStoryReplies('Cris', '@castca_')" class="w-full py-2 rounded-xl border border-lurnedia-border hover:border-lurnedia-greenLight text-xs font-bold text-sky-400 transition-colors cursor-pointer">
                 Read 24 replies
               </button>
             </div>
@@ -1018,7 +1053,7 @@
               </div>
 
               <p class="text-xs text-gray-200 leading-relaxed mb-4">
-                Mi pareja comenzó a aprender a programar en <span class="text-sky-400 font-medium">@lurnedia</span> para que juntos desarrolláramos la tecnología de nuestro proyecto. Hoy ya construye herramientas reales que nos sorprenden cada semana 🥺
+                Mi pareja comenzó a aprender a programar en <span class="text-sky-400 font-medium">@lurnedia</span> para que juntos desarrolláramos la tecnología de nuestro proyecto. Hoy ya construye herramientas reales que nos sorprenden cada semana.
               </p>
             </div>
 
@@ -1252,7 +1287,7 @@
       </div>
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-        <p>© 2026 Lurnedia Inc. Todos los derechos reservados POR DANNER VASQUEZ.</p>
+        <p>© 2026 Lurnedia Inc. Todos los derechos reservados.</p>
         <p>Hecho con pasión por la educación tech.</p>
       </div>
     </div>
@@ -1372,69 +1407,328 @@
     }
 
     const schoolsData = [
-      { name: "Inteligencia Artificial", courses: "64 cursos", icon: "🤖", cat: "ia" },
-      { name: "Desarrollo Web", courses: "142 cursos", icon: "💻", cat: "dev" },
-      { name: "Data Science e IA", courses: "89 cursos", icon: "📊", cat: "data" },
-      { name: "Ciberseguridad", courses: "48 cursos", icon: "🛡️", cat: "dev" },
-      { name: "Cloud Computing & DevOps", courses: "53 cursos", icon: "☁️", cat: "data" },
-      { name: "Diseño de Producto & UX", courses: "61 cursos", icon: "🎨", cat: "design" },
-      { name: "English Academy", courses: "75 cursos", icon: "🌎", cat: "all" },
-      { name: "Startups & Liderazgo", courses: "94 cursos", icon: "🚀", cat: "all" }
+      {
+        name: "Inteligencia Artificial",
+        courses: "64 cursos",
+        img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=80",
+        cat: "ia"
+      },
+      {
+        name: "Desarrollo Web",
+        courses: "142 cursos",
+        img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
+        cat: "dev"
+      },
+      {
+        name: "Data Science e IA",
+        courses: "89 cursos",
+        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80",
+        cat: "data"
+      },
+      {
+        name: "Ciberseguridad",
+        courses: "48 cursos",
+        img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80",
+        cat: "dev"
+      },
+      {
+        name: "Cloud Computing & DevOps",
+        courses: "53 cursos",
+        img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400&q=80",
+        cat: "data"
+      },
+      {
+        name: "Diseño de Producto & UX",
+        courses: "61 cursos",
+        img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=400&q=80",
+        cat: "design"
+      },
+      {
+        name: "English Academy",
+        courses: "75 cursos",
+        img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        cat: "all"
+      },
+      {
+        name: "Startups & Liderazgo",
+        courses: "94 cursos",
+        img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
+        cat: "all"
+      }
     ];
 
     const liveClassesByDay = {
       lunes: [
-        { time: "15:00 – 16:30", status: "Hoy en la tarde", title: "Fundamentos de LLMs y Prompts en Producción", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", room: "Sala IA-01" },
-        { time: "16:45 – 18:00", status: "Tarde • Práctica", title: "Maquetación Responsiva con Flexbox, Grid y Tailwind", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", room: "Sala Web-02" },
-        { time: "18:15 – 19:00", status: "Cierre de tarde", title: "Consultas SQL en Vivo para Análisis de Datos", teacher: "Valeria Ríos", school: "Escuela de Data Science", room: "Sala Data-01" }
+        {
+          time: "15:00 – 16:30",
+          status: "Hoy en la tarde",
+          title: "Fundamentos de LLMs y Prompts en Producción",
+          teacher: "Carlos Mendoza",
+          school: "Escuela de Inteligencia Artificial",
+          room: "Sala IA-01",
+          img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "16:45 – 18:00",
+          status: "Tarde • Práctica",
+          title: "Maquetación Responsiva con Flexbox, Grid y Tailwind",
+          teacher: "Javier Morales",
+          school: "Escuela de Desarrollo Web",
+          room: "Sala Web-02",
+          img: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "18:15 – 19:00",
+          status: "Cierre de tarde",
+          title: "Consultas SQL en Vivo para Análisis de Datos",
+          teacher: "Valeria Ríos",
+          school: "Escuela de Data Science",
+          room: "Sala Data-01",
+          img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+        }
       ],
       martes: [
-        { time: "14:30 – 16:00", status: "Tarde • En vivo", title: "Arquitectura de APIs REST con Node.js y TypeScript", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", room: "Sala Web-01" },
-        { time: "16:15 – 17:30", status: "Tarde • Taller", title: "Automatización de Flujos con Python y Webhooks", teacher: "Sofía Delgado", school: "Escuela de Automatización", room: "Sala Dev-03" },
-        { time: "17:45 – 19:00", status: "Cierre de tarde", title: "Design Systems y Componentes Escalables en Figma", teacher: "Camila Torres", school: "Escuela de Diseño UX/UI", room: "Sala UX-01" }
+        {
+          time: "14:30 – 16:00",
+          status: "Tarde • En vivo",
+          title: "Arquitectura de APIs REST con Node.js y TypeScript",
+          teacher: "Javier Morales",
+          school: "Escuela de Desarrollo Web",
+          room: "Sala Web-01",
+          img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "16:15 – 17:30",
+          status: "Tarde • Taller",
+          title: "Automatización de Flujos con Python y Webhooks",
+          teacher: "Sofía Delgado",
+          school: "Escuela de Automatización",
+          room: "Sala Dev-03",
+          img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "17:45 – 19:00",
+          status: "Cierre de tarde",
+          title: "Design Systems y Componentes Escalables en Figma",
+          teacher: "Camila Torres",
+          school: "Escuela de Diseño UX/UI",
+          room: "Sala UX-01",
+          img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=700&q=80"
+        }
       ],
       miercoles: [
-        { time: "15:00 – 16:15", status: "Tarde • En vivo", title: "RAG (Retrieval-Augmented Generation) Paso a Paso", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", room: "Sala IA-02" },
-        { time: "16:30 – 17:45", status: "Tarde • Lab", title: "Despliegue Seguro en la Nube y Variables de Entorno", teacher: "Andrés Paredes", school: "Escuela de Cloud & DevOps", room: "Sala Cloud-01" },
-        { time: "18:00 – 19:00", status: "Cierre de tarde", title: "Inglés Técnico para Reuniones de Producto y Scrum", teacher: "Gina Pedraza", school: "English Academy", room: "Sala Eng-01" }
+        {
+          time: "15:00 – 16:15",
+          status: "Tarde • En vivo",
+          title: "RAG (Retrieval-Augmented Generation) Paso a Paso",
+          teacher: "Carlos Mendoza",
+          school: "Escuela de Inteligencia Artificial",
+          room: "Sala IA-02",
+          img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "16:30 – 17:45",
+          status: "Tarde • Lab",
+          title: "Despliegue Seguro en la Nube y Variables de Entorno",
+          teacher: "Andrés Paredes",
+          school: "Escuela de Cloud & DevOps",
+          room: "Sala Cloud-01",
+          img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "18:00 – 19:00",
+          status: "Cierre de tarde",
+          title: "Inglés Técnico para Reuniones de Producto y Scrum",
+          teacher: "Gina Pedraza",
+          school: "English Academy",
+          room: "Sala Eng-01",
+          img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80"
+        }
       ],
       jueves: [
-        { time: "14:30 – 16:00", status: "Tarde • En vivo", title: "Limpieza y Visualización de Datos con Pandas & Power BI", teacher: "Valeria Ríos", school: "Escuela de Data Science", room: "Sala Data-02" },
-        { time: "16:15 – 17:30", status: "Tarde • Práctica", title: "Estado Global, Hooks y Rendimiento en React 19", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", room: "Sala Web-02" },
-        { time: "17:45 – 19:00", status: "Cierre de tarde", title: "Seguridad Web: Autenticación, JWT y Prevención OWASP", teacher: "Andrés Paredes", school: "Escuela de Ciberseguridad", room: "Sala Sec-01" }
+        {
+          time: "14:30 – 16:00",
+          status: "Tarde • En vivo",
+          title: "Limpieza y Visualización de Datos con Pandas & Power BI",
+          teacher: "Valeria Ríos",
+          school: "Escuela de Data Science",
+          room: "Sala Data-02",
+          img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "16:15 – 17:30",
+          status: "Tarde • Práctica",
+          title: "Estado Global, Hooks y Rendimiento en React 19",
+          teacher: "Javier Morales",
+          school: "Escuela de Desarrollo Web",
+          room: "Sala Web-02",
+          img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "17:45 – 19:00",
+          status: "Cierre de tarde",
+          title: "Seguridad Web: Autenticación, JWT y Prevención OWASP",
+          teacher: "Andrés Paredes",
+          school: "Escuela de Ciberseguridad",
+          room: "Sala Sec-01",
+          img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=700&q=80"
+        }
       ],
       viernes: [
-        { time: "15:00 – 16:30", status: "Tarde • Demo Day", title: "Construyendo un Agente de IA con Herramientas Externas", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", room: "Sala IA-01" },
-        { time: "16:45 – 18:00", status: "Tarde • Portafolio", title: "Revisión de Código y Buenas Prácticas Git en Equipo", teacher: "Sofía Delgado", school: "Escuela de Desarrollo Web", room: "Sala Dev-01" },
-        { time: "18:15 – 19:00", status: "Cierre de semana", title: "Cómo Preparar Entrevistas Técnicas y Salariales", teacher: "Camila Torres", school: "Startups & Liderazgo", room: "Sala Career-01" }
+        {
+          time: "15:00 – 16:30",
+          status: "Tarde • Demo Day",
+          title: "Construyendo un Agente de IA con Herramientas Externas",
+          teacher: "Carlos Mendoza",
+          school: "Escuela de Inteligencia Artificial",
+          room: "Sala IA-01",
+          img: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "16:45 – 18:00",
+          status: "Tarde • Portafolio",
+          title: "Revisión de Código y Buenas Prácticas Git en Equipo",
+          teacher: "Sofía Delgado",
+          school: "Escuela de Desarrollo Web",
+          room: "Sala Dev-01",
+          img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "18:15 – 19:00",
+          status: "Cierre de semana",
+          title: "Cómo Preparar Entrevistas Técnicas y Salariales",
+          teacher: "Camila Torres",
+          school: "Startups & Liderazgo",
+          room: "Sala Career-01",
+          img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+        }
       ],
       sabado: [
-        { time: "14:00 – 15:30", status: "Sábado tarde", title: "Maratón Práctica: De la Idea al Prototipo Web", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", room: "Sala Hack-01" },
-        { time: "15:45 – 17:15", status: "Sábado tarde", title: "Taller de IA Aplicada a Productividad y Negocios", teacher: "Valeria Ríos", school: "Escuela de Inteligencia Artificial", room: "Sala IA-03" },
-        { time: "17:30 – 18:45", status: "Cierre sábado", title: "Clínica de Proyectos de Estudiantes en Vivo", teacher: "Equipo Lurnedia", school: "Comunidad Lurnedia", room: "Auditorio Live" }
+        {
+          time: "14:00 – 15:30",
+          status: "Sábado tarde",
+          title: "Maratón Práctica: De la Idea al Prototipo Web",
+          teacher: "Javier Morales",
+          school: "Escuela de Desarrollo Web",
+          room: "Sala Hack-01",
+          img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "15:45 – 17:15",
+          status: "Sábado tarde",
+          title: "Taller de IA Aplicada a Productividad y Negocios",
+          teacher: "Valeria Ríos",
+          school: "Escuela de Inteligencia Artificial",
+          room: "Sala IA-03",
+          img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          time: "17:30 – 18:45",
+          status: "Cierre sábado",
+          title: "Clínica de Proyectos de Estudiantes en Vivo",
+          teacher: "Equipo Lurnedia",
+          school: "Comunidad Lurnedia",
+          room: "Auditorio Live",
+          img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=700&q=80"
+        }
       ]
     };
 
     const coursesData = [
-      { title: "Curso de Python desde Cero hasta Profesional", teacher: "Sofía Delgado", school: "Escuela de Desarrollo Web", level: "Básico", duration: "16 hrs", cat: "dev", rating: "4.9" },
-      { title: "Curso Práctico de ChatGPT, LLMs y Prompt Engineering", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", level: "Básico", duration: "10 hrs", cat: "ia", rating: "5.0" },
-      { title: "Curso de React.js y TypeScript Moderno", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", level: "Intermedio", duration: "22 hrs", cat: "dev", rating: "4.9" },
-      { title: "Curso de Análisis de Datos con SQL y Power BI", teacher: "Valeria Ríos", school: "Escuela de Data Science", level: "Básico", duration: "14 hrs", cat: "data", rating: "4.8" },
-      { title: "Curso de Creación de Agentes de IA con LangChain", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", level: "Avanzado", duration: "18 hrs", cat: "ia", rating: "4.9" },
-      { title: "Curso de Sistemas de Diseño en Figma", teacher: "Camila Torres", school: "Escuela de Diseño UX/UI", level: "Intermedio", duration: "12 hrs", cat: "design", rating: "4.9" },
-      { title: "Curso de Arquitectura Cloud en AWS", teacher: "Andrés Paredes", school: "Escuela de Cloud & DevOps", level: "Intermedio", duration: "19 hrs", cat: "data", rating: "4.8" },
-      { title: "Curso de Diseño de Interfaces UI con Tailwind CSS", teacher: "Camila Torres", school: "Escuela de Diseño UX/UI", level: "Básico", duration: "11 hrs", cat: "design", rating: "5.0" }
+      {
+        title: "Curso de Python desde Cero hasta Profesional",
+        teacher: "Sofía Delgado",
+        school: "Escuela de Desarrollo Web",
+        level: "Básico",
+        duration: "16 hrs",
+        cat: "dev",
+        rating: "4.9",
+        img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        title: "Curso Práctico de ChatGPT, LLMs y Prompt Engineering",
+        teacher: "Carlos Mendoza",
+        school: "Escuela de Inteligencia Artificial",
+        level: "Básico",
+        duration: "10 hrs",
+        cat: "ia",
+        rating: "5.0",
+        img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        title: "Curso de React.js y TypeScript Moderno",
+        teacher: "Javier Morales",
+        school: "Escuela de Desarrollo Web",
+        level: "Intermedio",
+        duration: "22 hrs",
+        cat: "dev",
+        rating: "4.9",
+        img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        title: "Curso de Análisis de Datos con SQL y Power BI",
+        teacher: "Valeria Ríos",
+        school: "Escuela de Data Science",
+        level: "Básico",
+        duration: "14 hrs",
+        cat: "data",
+        rating: "4.8",
+        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        title: "Curso de Creación de Agentes de IA con LangChain",
+        teacher: "Carlos Mendoza",
+        school: "Escuela de Inteligencia Artificial",
+        level: "Avanzado",
+        duration: "18 hrs",
+        cat: "ia",
+        rating: "4.9",
+        img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        title: "Curso de Sistemas de Diseño en Figma",
+        teacher: "Camila Torres",
+        school: "Escuela de Diseño UX/UI",
+        level: "Intermedio",
+        duration: "12 hrs",
+        cat: "design",
+        rating: "4.9",
+        img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        title: "Curso de Arquitectura Cloud en AWS",
+        teacher: "Andrés Paredes",
+        school: "Escuela de Cloud & DevOps",
+        level: "Intermedio",
+        duration: "19 hrs",
+        cat: "data",
+        rating: "4.8",
+        img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        title: "Curso de Diseño de Interfaces UI con Tailwind CSS",
+        teacher: "Camila Torres",
+        school: "Escuela de Diseño UX/UI",
+        level: "Básico",
+        duration: "11 hrs",
+        cat: "design",
+        rating: "5.0",
+        img: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=700&q=80"
+      }
     ];
 
     function renderSchools() {
       const container = document.getElementById('schoolsGrid');
       container.innerHTML = schoolsData.map(school => `
-        <div onclick="filterCourses('${school.cat}'); document.getElementById('cursos').scrollIntoView({ behavior: 'smooth', block: 'nearest' });" class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-5 card-hover cursor-pointer flex items-center gap-4">
-          <div class="w-12 h-12 rounded-xl bg-[#08080A] border border-lurnedia-border flex items-center justify-center text-2xl shrink-0">
-            ${school.icon}
-          </div>
-          <div>
-            <h3 class="text-sm font-bold text-white leading-snug">${school.name}</h3>
+        <div onclick="filterCourses('${school.cat}'); document.getElementById('cursos').scrollIntoView({ behavior: 'smooth', block: 'nearest' });" class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-3.5 card-hover cursor-pointer flex items-center gap-3.5">
+          <img
+            src="${school.img}"
+            alt="${school.name}"
+            class="w-14 h-14 rounded-xl object-cover border border-lurnedia-border shrink-0"
+            onerror="this.src='https://placehold.co/120x120/111317/4ADE80?text=L'"
+          />
+          <div class="min-w-0">
+            <h3 class="text-sm font-bold text-white leading-snug truncate">${school.name}</h3>
             <p class="text-xs text-lurnedia-greenLight font-medium mt-0.5">${school.courses}</p>
           </div>
         </div>
@@ -1454,30 +1748,39 @@
       });
 
       container.innerHTML = classesForDay.map(item => `
-        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6 card-hover flex flex-col justify-between">
+        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden card-hover flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-4">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight border border-lurnedia-greenLight/25">
+            <div class="h-36 w-full relative overflow-hidden border-b border-lurnedia-border bg-[#08080A]">
+              <img
+                src="${item.img}"
+                alt="${item.title}"
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/600x320/111317/4ADE80?text=Live'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#111317] via-black/30 to-transparent"></div>
+              <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-black/80 text-lurnedia-greenLight border border-lurnedia-greenLight/30">
                 <span class="w-1.5 h-1.5 rounded-full bg-lurnedia-greenLight"></span>
                 ${item.status}
               </span>
-              <span class="text-xs font-mono font-bold text-gray-300 bg-[#08080A] px-2.5 py-1 rounded-lg border border-lurnedia-border">
+              <span class="absolute top-3 right-3 text-xs font-mono font-bold text-white bg-black/80 px-2.5 py-1 rounded-lg border border-white/10">
                 ${item.time}
               </span>
             </div>
 
-            <p class="text-[11px] font-semibold text-lurnedia-greenLight uppercase tracking-wider mb-1">
-              ${item.school}
-            </p>
-            <h3 class="text-lg font-bold text-white leading-snug mb-2">
-              ${item.title}
-            </h3>
-            <p class="text-xs text-gray-400">
-              Profesor: <strong class="text-gray-200">${item.teacher}</strong> • <span class="text-gray-500">${item.room}</span>
-            </p>
+            <div class="p-6 pb-0">
+              <p class="text-[11px] font-semibold text-lurnedia-greenLight uppercase tracking-wider mb-1">
+                ${item.school}
+              </p>
+              <h3 class="text-lg font-bold text-white leading-snug mb-2">
+                ${item.title}
+              </h3>
+              <p class="text-xs text-gray-400">
+                Profesor: <strong class="text-gray-200">${item.teacher}</strong> • <span class="text-gray-500">${item.room}</span>
+              </p>
+            </div>
           </div>
 
-          <div class="pt-5 mt-5 border-t border-lurnedia-border/70 flex items-center justify-between gap-3">
+          <div class="p-6 pt-4 mt-4 border-t border-lurnedia-border/70 flex items-center justify-between gap-3">
             <span class="text-xs text-gray-400">Chat y Q&A en vivo</span>
             <button
               type="button"
@@ -1547,14 +1850,21 @@
       container.innerHTML = filtered.map(course => `
         <div onclick="openCoursePreview('${course.title}', '${course.teacher}', '${course.school}')" class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden card-hover cursor-pointer flex flex-col justify-between group">
           <div>
-            <div class="h-32 bg-gradient-to-br from-[#0F2418] via-[#11151B] to-[#08080A] p-4 flex flex-col justify-between border-b border-lurnedia-border relative">
-              <div class="flex items-center justify-between">
-                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-black/60 text-lurnedia-greenLight border border-lurnedia-greenLight/30">
+            <div class="h-36 w-full border-b border-lurnedia-border relative overflow-hidden bg-[#08080A]">
+              <img
+                src="${course.img}"
+                alt="${course.title}"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://placehold.co/600x320/111317/4ADE80?text=Curso'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#111317] via-black/30 to-transparent"></div>
+              <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-black/75 text-lurnedia-greenLight border border-lurnedia-greenLight/30">
                   ${course.level}
                 </span>
-                <span class="text-xs font-bold text-yellow-400">★ ${course.rating}</span>
+                <span class="text-xs font-bold text-yellow-400 bg-black/75 px-2 py-0.5 rounded-md">★ ${course.rating}</span>
               </div>
-              <span class="text-[11px] font-medium text-gray-400">${course.school}</span>
+              <span class="absolute bottom-2.5 left-3 text-[11px] font-semibold text-gray-200">${course.school}</span>
             </div>
 
             <div class="p-5">
