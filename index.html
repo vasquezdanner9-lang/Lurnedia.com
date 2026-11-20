@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lurnedia | La plataforma de educación profesional en tecnología</title>
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Fuentes Google: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -50,7 +48,6 @@
       overflow-x: hidden;
     }
 
-    /* Scrollbar personalizada */
     ::-webkit-scrollbar {
       width: 8px;
       height: 8px;
@@ -66,14 +63,12 @@
       background: #22C55E;
     }
 
-    /* Barra de navegación translúcida */
     .glass-nav {
       background: rgba(8, 8, 10, 0.85);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
 
-    /* Elevación y brillo sutil en tarjetas */
     .card-hover {
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -83,7 +78,6 @@
       box-shadow: 0 12px 30px -10px rgba(34, 197, 94, 0.18);
     }
 
-    /* Ocultar scrollbar en tabs horizontales */
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
@@ -108,7 +102,6 @@
       animation: fadeIn 0.2s ease-out forwards;
     }
 
-    /* Estilos mejorados para el banner promocional con celular interactivo */
     .promo-stage {
       background:
         radial-gradient(circle at 82% 35%, rgba(74, 222, 128, 0.16) 0%, rgba(8, 8, 10, 0) 48%),
@@ -134,7 +127,6 @@
   <header class="sticky top-0 z-40 glass-nav border-b border-lurnedia-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
 
-      <!-- Izquierda: Logotipo Lurnedia y Enlaces -->
       <div class="flex items-center gap-7">
         <a href="#" class="flex items-center gap-2.5 group focus:outline-none">
           <svg width="36" height="38" viewBox="0 0 100 106" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0 transition-transform duration-200 group-hover:scale-105">
@@ -160,6 +152,10 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </a>
+          <a href="#en-vivo-tarde" class="hover:text-lurnedia-greenLight transition-colors inline-flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+            <span>En Vivo Tarde</span>
+          </a>
           <a href="#rutas" class="hover:text-lurnedia-greenLight transition-colors">Rutas</a>
           <a href="#cursos" class="hover:text-lurnedia-greenLight transition-colors">Cursos</a>
           <a href="#planes" class="hover:text-lurnedia-greenLight transition-colors">Planes</a>
@@ -167,7 +163,6 @@
         </nav>
       </div>
 
-      <!-- Centro: Buscador Global -->
       <div class="hidden md:flex flex-1 max-w-md mx-2">
         <div class="relative w-full">
           <span class="absolute inset-y-0 left-3.5 flex items-center text-gray-400 pointer-events-none">
@@ -184,7 +179,6 @@
         </div>
       </div>
 
-      <!-- Derecha: Botones de Acceso -->
       <div class="flex items-center gap-2 sm:gap-3">
         <button onclick="openModal('login')" class="text-xs sm:text-sm font-semibold text-gray-200 hover:text-lurnedia-greenLight px-2.5 sm:px-3 py-2 rounded-lg transition-colors cursor-pointer">
           Iniciar sesión
@@ -198,7 +192,6 @@
 
   <!-- BANNER PROMOCIONAL SUPERIOR ESTILO BLACK FRIDAY + CELULAR INTERACTIVO -->
   <section class="promo-stage relative overflow-hidden border-b border-lurnedia-border py-8 sm:py-10 lg:py-12">
-    <!-- Bloques geométricos decorativos inspirados en la captura de referencia -->
     <div class="hidden sm:block absolute -left-14 bottom-0 w-44 h-44 rounded-tr-[90px] bg-sky-400/80 pointer-events-none"></div>
     <div class="hidden sm:block absolute left-16 -top-10 w-32 h-32 rounded-b-full bg-amber-300/85 pointer-events-none"></div>
     <div class="hidden lg:block absolute right-6 bottom-0 w-48 h-28 rounded-t-full bg-white/90 pointer-events-none"></div>
@@ -207,7 +200,6 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
-        <!-- Izquierda: Oferta especial, precio y cuenta regresiva en vivo -->
         <div class="lg:col-span-7 text-center lg:text-left">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-lurnedia-gradient text-black font-extrabold text-xs uppercase tracking-wider mb-3 shadow-md shadow-lurnedia-greenDark/25">
             <span>BLACK FRIDAY</span>
@@ -240,7 +232,6 @@
             </button>
           </div>
 
-          <!-- Contador regresivo en vivo -->
           <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-2.5 bg-[#08080A]/75 border border-white/10 rounded-2xl px-4 py-2.5">
             <span class="text-xs sm:text-sm font-semibold text-gray-200 mr-1">
               El precio especial termina en
@@ -257,11 +248,9 @@
           </div>
         </div>
 
-        <!-- Derecha: Celular interactivo con pestañas, reproductor, tarjeta flotante y buscador -->
         <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
           <div class="relative w-full max-w-[310px] sm:max-w-[330px]">
 
-            <!-- Tarjeta flotante superior izquierda estilo captura -->
             <div onclick="openCoursePreview('Diseño de Flujos con Notion AI', 'Andrea Montoya', 'Escuela de Inteligencia Artificial')" class="hidden sm:flex items-center gap-2.5 absolute -left-16 top-14 z-20 bg-lurnedia-card/95 hover:bg-lurnedia-cardHover border border-lurnedia-greenLight/40 rounded-2xl p-2.5 shadow-xl cursor-pointer transition-all max-w-[195px]">
               <img
                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80"
@@ -276,16 +265,13 @@
               </div>
             </div>
 
-            <!-- Mascota / insignia flotante inferior derecha -->
             <button type="button" onclick="openModal('register')" title="Asistente Lurnedia" class="hidden sm:flex items-center justify-center absolute -right-5 bottom-12 z-20 w-12 h-12 rounded-2xl bg-lurnedia-gradient text-black font-extrabold text-lg shadow-xl shadow-lurnedia-greenDark/35 hover:scale-105 transition-transform cursor-pointer">
               L
             </button>
 
-            <!-- Marco del smartphone -->
             <div class="phone-frame bg-[#08080A] rounded-[36px] p-2.5 border-2 border-gray-700/80">
               <div class="bg-[#111317] rounded-[28px] overflow-hidden">
 
-                <!-- Barra superior del teléfono + pestañas interactivas -->
                 <div class="px-4 pt-2.5 pb-2 bg-[#0B0E11] border-b border-lurnedia-border">
                   <div class="flex items-center justify-between text-[10px] text-gray-400 font-semibold mb-2">
                     <span id="phoneClock">15:11</span>
@@ -293,7 +279,6 @@
                     <span class="text-lurnedia-greenLight">5G • 98%</span>
                   </div>
 
-                  <!-- Pestañas interactivas dentro del celular -->
                   <div class="grid grid-cols-3 gap-1 bg-[#08080A] p-1 rounded-xl border border-lurnedia-border text-[10px] font-bold">
                     <button type="button" data-phone-tab="ia" onclick="selectPhoneLesson('ia')" class="phone-tab py-1.5 rounded-lg bg-lurnedia-gradient text-black transition-all cursor-pointer">
                       IA & Prompts
@@ -307,7 +292,6 @@
                   </div>
                 </div>
 
-                <!-- Pantalla de video dentro del celular -->
                 <div class="relative aspect-[16/11] bg-[#08080A] overflow-hidden group cursor-pointer" onclick="openActivePhoneCourse()">
                   <img
                     id="phoneLessonImg"
@@ -341,7 +325,6 @@
                   </div>
                 </div>
 
-                <!-- Barra de búsqueda rápida dentro del celular -->
                 <div class="p-3 bg-[#0B0E11] space-y-2">
                   <form onsubmit="handlePhoneSearch(event)" class="relative">
                     <input
@@ -372,14 +355,13 @@
     </div>
   </section>
 
-  <!-- SECCIÓN PRINCIPAL INFERIOR (ESTRUCTURA DE CAPTURA: REGISTRO A LA IZQUIERDA + CLASES GRATIS A LA DERECHA) -->
+  <!-- SECCIÓN PRINCIPAL INFERIOR: REGISTRO RÁPIDO + CLASES GRATIS -->
   <section id="inicio-rapido" class="relative overflow-hidden bg-lurnedia-glow py-14 sm:py-16 lg:py-20 border-b border-lurnedia-border">
     <div class="absolute -top-24 left-1/4 w-96 h-96 bg-lurnedia-greenDark/10 rounded-full blur-3xl pointer-events-none animate-glow"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
 
-        <!-- Columna Izquierda: Titular de impacto + Registro rápido (Google / Correo) -->
         <div class="lg:col-span-5">
           <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.12] text-white mb-4">
             Aprende <span class="text-lurnedia-greenLight">IA, inglés</span><br />
@@ -395,7 +377,6 @@
               Crea tu cuenta y empieza gratis
             </h2>
 
-            <!-- Botón Continuar con Google -->
             <button
               type="button"
               onclick="handleGoogleQuickStart()"
@@ -416,7 +397,6 @@
               <div class="h-px bg-lurnedia-border flex-1"></div>
             </div>
 
-            <!-- Formulario con Correo electrónico -->
             <form onsubmit="handleHeroSignup(event)" class="space-y-3">
               <input
                 id="heroEmailInput"
@@ -442,7 +422,6 @@
           </div>
         </div>
 
-        <!-- Columna Derecha: "Empieza hoy con una clase gratis" (grid 2x2 interactivo) -->
         <div class="lg:col-span-7">
           <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
             <h2 class="text-xl sm:text-2xl font-extrabold text-white">
@@ -452,7 +431,6 @@
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-            <!-- Clase gratis 1 -->
             <article onclick="openCoursePreview('Introducción a la Inteligencia Artificial', 'Jaime Tello', 'Escuela de Inteligencia Artificial')" class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-3.5 card-hover cursor-pointer group">
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden bg-gradient-to-br from-sky-900/70 via-cyan-800/50 to-slate-900 mb-3">
                 <img
@@ -471,7 +449,6 @@
               <p class="text-xs text-gray-400 mt-0.5">Jaime Tello</p>
             </article>
 
-            <!-- Clase gratis 2 -->
             <article onclick="openCoursePreview('Estrategias para Aprender Inglés en Línea', 'Gina Pedraza', 'Escuela de Inglés Técnico')" class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-3.5 card-hover cursor-pointer group">
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden bg-gradient-to-br from-cyan-900/70 via-teal-800/50 to-slate-900 mb-3">
                 <img
@@ -490,7 +467,6 @@
               <p class="text-xs text-gray-400 mt-0.5">Gina Pedraza</p>
             </article>
 
-            <!-- Clase gratis 3 -->
             <article onclick="openCoursePreview('Cómo Crear un Portafolio Tech que Consiga Entrevistas', 'Elena Morales', 'Escuela de Liderazgo Tech')" class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-3.5 card-hover cursor-pointer group">
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden bg-gradient-to-br from-emerald-950/80 via-green-900/40 to-slate-900 mb-3">
                 <img
@@ -509,7 +485,6 @@
               <p class="text-xs text-gray-400 mt-0.5">Elena Morales</p>
             </article>
 
-            <!-- Clase gratis 4 -->
             <article onclick="openCoursePreview('Automatiza Tareas Diarias con Python y APIs', 'Roberto Silva', 'Escuela de Automatización & No-Code')" class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-3.5 card-hover cursor-pointer group">
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden bg-gradient-to-br from-slate-800 via-zinc-900 to-black mb-3">
                 <img
@@ -552,50 +527,86 @@
     </div>
   </section>
 
-  <!-- SECCIÓN CURSOS POPULARES CON FILTROS -->
+  <!-- SECCIÓN CLASES EN VIVO POR DÍA (HORARIO DE TARDE) -->
+  <section id="en-vivo-tarde" class="py-16 lg:py-22 bg-gradient-to-b from-[#08080A] via-[#0B120E] to-[#08080A] border-b border-lurnedia-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/15 border border-red-500/35 text-red-400 text-xs font-extrabold uppercase tracking-wider mb-3">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+            <span>Transmisión en Vivo • Solo en la Tarde</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">
+            Clases en Vivo por Día <span class="text-lurnedia-greenLight">(14:00 – 19:00)</span>
+          </h2>
+          <p class="text-sm sm:text-base text-gray-400 mt-1.5 max-w-2xl">
+            Conéctate en las tardes de lunes a sábado a sesiones prácticas en vivo, resuelve dudas con profesores y participa con chat en tiempo real.
+          </p>
+        </div>
+
+        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl px-4 py-3 flex items-center gap-3 self-start lg:self-auto">
+          <div class="w-9 h-9 rounded-xl bg-lurnedia-greenDark/15 text-lurnedia-greenLight flex items-center justify-center font-bold text-base">
+            🕒
+          </div>
+          <div>
+            <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Franja Horaria Tarde</p>
+            <p class="text-xs sm:text-sm font-bold text-white">Lunes a Sábado • 2:00 PM a 7:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-8" id="dayTabs">
+        <button type="button" data-day="lunes" class="day-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-lurnedia-gradient text-black transition-all shrink-0 cursor-pointer">
+          Lunes
+        </button>
+        <button type="button" data-day="martes" class="day-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
+          Martes
+        </button>
+        <button type="button" data-day="miercoles" class="day-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
+          Miércoles
+        </button>
+        <button type="button" data-day="jueves" class="day-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
+          Jueves
+        </button>
+        <button type="button" data-day="viernes" class="day-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
+          Viernes
+        </button>
+        <button type="button" data-day="sabado" class="day-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
+          Sábado
+        </button>
+      </div>
+
+      <div id="liveClassesGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CURSOS MÁS POPULARES -->
   <section id="cursos" class="py-16 lg:py-20 bg-lurnedia-surface border-b border-lurnedia-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
         <div>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Cursos más populares</h2>
           <p class="text-sm text-gray-400 mt-1">Aprende habilidades prácticas con proyectos evaluados por la comunidad.</p>
         </div>
 
         <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" id="categoryTabs">
-          <button data-cat="all" onclick="filterCourses('all')" class="cat-btn active px-4 py-2 rounded-xl text-xs font-bold bg-lurnedia-gradient text-black transition-all shrink-0 cursor-pointer">
+          <button data-cat="all" class="cat-btn active px-4 py-2 rounded-xl text-xs font-bold bg-lurnedia-gradient text-black transition-all shrink-0 cursor-pointer">
             Todos
           </button>
-          <button data-cat="ia" onclick="filterCourses('ia')" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
+          <button data-cat="ia" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
             Inteligencia Artificial
           </button>
-          <button data-cat="dev" onclick="filterCourses('dev')" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
+          <button data-cat="dev" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
             Desarrollo Web
           </button>
-          <button data-cat="data" onclick="filterCourses('data')" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
+          <button data-cat="data" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
             Data & Cloud
           </button>
-          <button data-cat="design" onclick="filterCourses('design')" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
+          <button data-cat="design" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer">
             Diseño UX/UI
           </button>
         </div>
-      </div>
-
-      <!-- Buscador rápido dentro de cursos (visible especialmente en móviles y para filtrado directo) -->
-      <div class="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div class="relative w-full sm:max-w-md">
-          <span class="absolute inset-y-0 left-3.5 flex items-center text-gray-400 pointer-events-none">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </span>
-          <input
-            id="coursesSearchInput"
-            type="text"
-            placeholder="Filtrar cursos por título, tema o instructor..."
-            class="w-full bg-lurnedia-card border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-lurnedia-greenLight transition-all"
-          />
-        </div>
-        <p id="courseCountLabel" class="text-xs text-gray-400 font-medium"></p>
       </div>
 
       <div id="coursesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
@@ -680,7 +691,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN PLANES Y PRECIOS -->
+  <!-- SECCIÓN PLANES -->
   <section id="planes" class="py-16 lg:py-24 bg-lurnedia-surface border-b border-lurnedia-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-10">
@@ -701,7 +712,6 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
-        <!-- Plan Basic -->
         <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-7 flex flex-col justify-between">
           <div>
             <h3 class="text-lg font-bold text-white">Plan Basic</h3>
@@ -734,7 +744,6 @@
           </button>
         </div>
 
-        <!-- Plan Expert -->
         <div class="bg-lurnedia-card border-2 border-lurnedia-greenLight rounded-2xl p-7 flex flex-col justify-between relative shadow-2xl shadow-lurnedia-greenDark/15">
           <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-lurnedia-gradient text-black text-xs font-extrabold px-4 py-1 rounded-full uppercase tracking-wider">
             Recomendado
@@ -770,7 +779,6 @@
           </button>
         </div>
 
-        <!-- Plan Expert Duo -->
         <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-7 flex flex-col justify-between">
           <div>
             <h3 class="text-lg font-bold text-white">Plan Expert Duo</h3>
@@ -806,25 +814,24 @@
     </div>
   </section>
 
-  <!-- TESTIMONIOS Y SECCIÓN EMPRESARIAL -->
+  <!-- SECCIÓN TESTIMONIOS Y EMPRESAS -->
   <section id="empresas" class="py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <!-- Testimonios -->
-      <div class="mb-20">
+      <div class="mb-16">
         <h2 class="text-2xl sm:text-3xl font-extrabold text-white text-center mb-10">
           Historias reales de estudiantes <span class="text-lurnedia-greenLight">Lurnedia</span>
         </h2>
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6 card-hover">
+          <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6">
             <p class="text-sm text-gray-300 leading-relaxed mb-5">
               "En 8 meses pasé de trabajar en soporte técnico a conseguir mi primer empleo remoto como Frontend Developer. Las rutas de Lurnedia fueron clave."
             </p>
             <div class="flex items-center gap-3">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80"
                 alt="Andrea Rojas"
-                class="w-10 h-10 rounded-full object-cover border border-lurnedia-greenLight/40 shrink-0"
+                class="w-10 h-10 rounded-full object-cover border border-lurnedia-greenLight/40"
                 onerror="this.src='https://placehold.co/100x100/22C55E/08080A?text=AR'"
               />
               <div>
@@ -834,855 +841,1008 @@
             </div>
           </div>
 
-          <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6 card-hover">
+          <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6">
             <p class="text-sm text-gray-300 leading-relaxed mb-5">
-              "Los cursos de IA aplicada y arquitectura en la nube me ayudaron a automatizar flujos de datos en mi equipo y obtener un ascenso en menos de medio año."
+              "Los cursos de Inteligencia Artificial y Python me permitieron automatizar procesos en mi empresa y duplicar mi salario en menos de un año."
             </p>
             <div class="flex items-center gap-3">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
-                alt="Diego Paredes"
-                class="w-10 h-10 rounded-full object-cover border border-lurnedia-greenLight/40 shrink-0"
-                onerror="this.src='https://placehold.co/100x100/22C55E/08080A?text=DP'"
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80"
+                alt="Diego Vargas"
+                class="w-10 h-10 rounded-full object-cover border border-lurnedia-greenLight/40"
+                onerror="this.src='https://placehold.co/100x100/22C55E/08080A?text=DV'"
               />
               <div>
-                <p class="text-sm font-bold text-white">Diego Paredes</p>
-                <p class="text-xs text-lurnedia-greenLight">Data & Cloud Specialist</p>
+                <p class="text-sm font-bold text-white">Diego Vargas</p>
+                <p class="text-xs text-lurnedia-greenLight">Data & AI Specialist</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6 card-hover">
+          <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6">
             <p class="text-sm text-gray-300 leading-relaxed mb-5">
-              "Pasé de diseño gráfico tradicional a liderar sistemas de diseño UX/UI en productos digitales. La claridad práctica de cada clase marca la diferencia."
+              "La calidad de los profesores y los proyectos prácticos hacen toda la diferencia. Nunca paras de aprender cosas aplicables desde el día uno."
             </p>
             <div class="flex items-center gap-3">
               <img
-                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
-                alt="Camila Navarro"
-                class="w-10 h-10 rounded-full object-cover border border-lurnedia-greenLight/40 shrink-0"
-                onerror="this.src='https://placehold.co/100x100/22C55E/08080A?text=CN'"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=160&q=80"
+                alt="Mariana Castro"
+                class="w-10 h-10 rounded-full object-cover border border-lurnedia-greenLight/40"
+                onerror="this.src='https://placehold.co/100x100/22C55E/08080A?text=MC'"
               />
               <div>
-                <p class="text-sm font-bold text-white">Camila Navarro</p>
-                <p class="text-xs text-lurnedia-greenLight">Senior Product Designer</p>
+                <p class="text-sm font-bold text-white">Mariana Castro</p>
+                <p class="text-xs text-lurnedia-greenLight">Product Designer</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Lurnedia for Teams / Empresas -->
-      <div class="bg-gradient-to-br from-lurnedia-card via-[#0E1612] to-lurnedia-card border border-lurnedia-greenLight/30 rounded-3xl p-8 sm:p-10 lg:p-12 relative overflow-hidden">
-        <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
-          <div class="lg:col-span-7">
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight mb-4">
-              Lurnedia for Teams
-            </span>
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
-              Acelera la transformación digital de tu empresa
-            </h2>
-            <p class="text-sm sm:text-base text-gray-300 mb-6 leading-relaxed">
-              Capacita a tus equipos de ingeniería, producto, datos y operaciones con rutas a medida, métricas de progreso en tiempo real y soporte dedicado para líderes técnicos.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <button onclick="showToast('¡Solicitud enviada! Nuestro equipo empresarial te contactará en menos de 24 horas.')" class="bg-lurnedia-gradient hover:brightness-110 text-black font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-lurnedia-greenDark/20 transition-all cursor-pointer">
-                Solicitar demo para empresas
-              </button>
-              <a href="#planes" class="px-5 py-3.5 rounded-xl border border-lurnedia-border hover:border-lurnedia-greenLight text-sm font-semibold text-gray-200 transition-colors">
-                Ver planes individuales
-              </a>
-            </div>
-          </div>
-
-          <div class="lg:col-span-5 grid grid-cols-2 gap-4">
-            <div class="bg-[#08080A]/90 border border-lurnedia-border rounded-2xl p-5">
-              <p class="text-2xl sm:text-3xl font-extrabold text-lurnedia-greenLight">+45%</p>
-              <p class="text-xs text-gray-400 mt-1">Mayor velocidad de adopción de nuevas tecnologías</p>
-            </div>
-            <div class="bg-[#08080A]/90 border border-lurnedia-border rounded-2xl p-5">
-              <p class="text-2xl sm:text-3xl font-extrabold text-white">24/7</p>
-              <p class="text-xs text-gray-400 mt-1">Panel de analítica y seguimiento de equipos</p>
-            </div>
-            <div class="bg-[#08080A]/90 border border-lurnedia-border rounded-2xl p-5">
-              <p class="text-2xl sm:text-3xl font-extrabold text-white">100%</p>
-              <p class="text-xs text-gray-400 mt-1">Rutas alineadas a objetivos de negocio</p>
-            </div>
-            <div class="bg-[#08080A]/90 border border-lurnedia-border rounded-2xl p-5">
-              <p class="text-2xl sm:text-3xl font-extrabold text-lurnedia-greenLight">5+</p>
-              <p class="text-xs text-gray-400 mt-1">Asientos flexibles desde el primer día</p>
-            </div>
-          </div>
+      <div class="rounded-3xl bg-gradient-to-r from-[#101914] via-[#132219] to-[#0E1318] border border-lurnedia-greenDark/30 p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="max-w-xl text-center lg:text-left">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-lurnedia-greenLight">Lurnedia para Empresas</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-2 mb-3">
+            Potencia el talento tecnológico de tu equipo
+          </h3>
+          <p class="text-sm sm:text-base text-gray-300">
+            Capacita a tus colaboradores con rutas personalizadas, métricas de avance en tiempo real y certificaciones verificables.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+          <button onclick="openModal('register')" class="px-6 py-3.5 rounded-xl bg-lurnedia-gradient hover:brightness-110 text-black font-extrabold text-sm shadow-lg shadow-lurnedia-greenDark/25 transition-all cursor-pointer">
+            Solicitar demo empresarial
+          </button>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- FOOTER COMPLETO -->
-  <footer class="bg-lurnedia-surface border-t border-lurnedia-border pt-14 pb-10">
+  <!-- CASOS DE ÉXITO DE ESTUDIANTES LURNEDIA -->
+  <section id="casos-de-exito" class="py-16 lg:py-20 bg-lurnedia-surface border-t border-b border-lurnedia-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-lurnedia-border">
-        <div class="col-span-2">
-          <a href="#" class="inline-flex items-center gap-2.5 mb-4">
-            <svg width="32" height="34" viewBox="0 0 100 106" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white text-center mb-10">
+        Casos de éxito de estudiantes <span class="text-lurnedia-greenLight">Lurnedia</span>
+      </h2>
+
+      <div class="relative">
+        <div id="successCarousel" class="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth pb-2">
+
+          <!-- Tarjeta 1 -->
+          <article class="w-[300px] sm:w-[320px] shrink-0 bg-lurnedia-card border border-lurnedia-border rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+                    alt="PurpleDoll lvl2"
+                    class="w-10 h-10 rounded-full object-cover shrink-0 border border-lurnedia-border"
+                    onerror="this.src='https://placehold.co/80x80/22C55E/08080A?text=PD'"
+                  />
+                  <div class="min-w-0">
+                    <p class="text-xs font-bold text-white truncate">PurpleDoll lvl2 🏳️‍🌈</p>
+                    <p class="text-[11px] text-gray-400 truncate">@purpled... • <button type="button" onclick="toggleFollowBtn(this)" class="text-sky-400 hover:underline font-semibold cursor-pointer">Follow</button></p>
+                  </div>
+                </div>
+                <span class="text-white font-extrabold text-base leading-none shrink-0">𝕏</span>
+              </div>
+
+              <p class="text-xs text-gray-200 leading-relaxed mb-3">
+                Todas las historias son diferentes y esta es la mía. Jamás imaginé lograr mis metas profesionales con las mejores condiciones.
+              </p>
+              <p class="text-xs text-gray-200 leading-relaxed mb-4">
+                Estudié y practiqué sin parar hasta que llegó la oportunidad. Conocí <span class="text-sky-400 font-medium">@lurnedia</span> y el resto es historia. Mil gracias por tanta guía 💚
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[11px] text-gray-400 mb-3">9:04 PM • Aug 20, 2024</p>
+              <div class="flex items-center gap-4 text-xs text-gray-300 mb-3 pt-2 border-t border-lurnedia-border/60">
+                <button type="button" onclick="togglePostLike(this, 148)" class="inline-flex items-center gap-1 hover:text-pink-400 transition-colors cursor-pointer">
+                  <span>♥</span> <span class="like-count font-semibold">148</span>
+                </button>
+                <button type="button" onclick="openStoryReplies('PurpleDoll lvl2', '@purpled...')" class="inline-flex items-center gap-1 hover:text-sky-400 transition-colors cursor-pointer">
+                  <span>💬</span> <span>Reply</span>
+                </button>
+                <button type="button" onclick="copyPostLink(this)" class="inline-flex items-center gap-1 hover:text-lurnedia-greenLight transition-colors cursor-pointer">
+                  <span>🔗</span> <span>Copy...</span>
+                </button>
+              </div>
+              <button type="button" onclick="openStoryReplies('PurpleDoll lvl2', '@purpled...')" class="w-full py-2 rounded-xl border border-lurnedia-border hover:border-lurnedia-greenLight text-xs font-bold text-sky-400 transition-colors cursor-pointer">
+                Read 13 replies
+              </button>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="w-[300px] sm:w-[320px] shrink-0 bg-lurnedia-card border border-lurnedia-border rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+                    alt="Cris"
+                    class="w-10 h-10 rounded-full object-cover shrink-0 border border-lurnedia-border"
+                    onerror="this.src='https://placehold.co/80x80/22C55E/08080A?text=CR'"
+                  />
+                  <div class="min-w-0">
+                    <p class="text-xs font-bold text-white truncate">Cris 💚</p>
+                    <p class="text-[11px] text-gray-400 truncate">@castca_ • <button type="button" onclick="toggleFollowBtn(this)" class="text-sky-400 hover:underline font-semibold cursor-pointer">Follow</button></p>
+                  </div>
+                </div>
+                <span class="text-white font-extrabold text-base leading-none shrink-0">𝕏</span>
+              </div>
+
+              <p class="text-xs text-gray-200 leading-relaxed mb-4">
+                Pasé de estar estancado a hacerme 20 cursos en <span class="text-sky-400 font-medium">@lurnedia</span>, conseguir trabajo y ver que las cosas sí mejoran si uno se mueve un poco.
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[11px] text-gray-400 mb-3">11:08 PM • Sep 23, 2024</p>
+              <div class="flex items-center gap-4 text-xs text-gray-300 mb-3 pt-2 border-t border-lurnedia-border/60">
+                <button type="button" onclick="togglePostLike(this, 1300, '1.3K')" class="inline-flex items-center gap-1 hover:text-pink-400 transition-colors cursor-pointer">
+                  <span>♥</span> <span class="like-count font-semibold">1.3K</span>
+                </button>
+                <button type="button" onclick="openStoryReplies('Cris 💚', '@castca_')" class="inline-flex items-center gap-1 hover:text-sky-400 transition-colors cursor-pointer">
+                  <span>💬</span> <span>Reply</span>
+                </button>
+                <button type="button" onclick="copyPostLink(this)" class="inline-flex items-center gap-1 hover:text-lurnedia-greenLight transition-colors cursor-pointer">
+                  <span>🔗</span> <span>Copy...</span>
+                </button>
+              </div>
+              <button type="button" onclick="openStoryReplies('Cris 💚', '@castca_')" class="w-full py-2 rounded-xl border border-lurnedia-border hover:border-lurnedia-greenLight text-xs font-bold text-sky-400 transition-colors cursor-pointer">
+                Read 24 replies
+              </button>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="w-[300px] sm:w-[320px] shrink-0 bg-lurnedia-card border border-lurnedia-border rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80"
+                    alt="La Naranja"
+                    class="w-10 h-10 rounded-full object-cover shrink-0 border border-lurnedia-border"
+                    onerror="this.src='https://placehold.co/80x80/22C55E/08080A?text=LN'"
+                  />
+                  <div class="min-w-0">
+                    <p class="text-xs font-bold text-white truncate">La Naranja</p>
+                    <p class="text-[11px] text-gray-400 truncate">@naranjan... • <button type="button" onclick="toggleFollowBtn(this)" class="text-sky-400 hover:underline font-semibold cursor-pointer">Follow</button></p>
+                  </div>
+                </div>
+                <span class="text-white font-extrabold text-base leading-none shrink-0">𝕏</span>
+              </div>
+
+              <p class="text-xs text-gray-200 leading-relaxed mb-4">
+                Mi pareja comenzó a aprender a programar en <span class="text-sky-400 font-medium">@lurnedia</span> para que juntos desarrolláramos la tecnología de nuestro proyecto. Hoy ya construye herramientas reales que nos sorprenden cada semana 🥺
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[11px] text-gray-400 mb-3">9:31 PM • Sep 2, 2024</p>
+              <div class="flex items-center gap-4 text-xs text-gray-300 mb-3 pt-2 border-t border-lurnedia-border/60">
+                <button type="button" onclick="togglePostLike(this, 9)" class="inline-flex items-center gap-1 hover:text-pink-400 transition-colors cursor-pointer">
+                  <span>♥</span> <span class="like-count font-semibold">9</span>
+                </button>
+                <button type="button" onclick="openStoryReplies('La Naranja', '@naranjan...')" class="inline-flex items-center gap-1 hover:text-sky-400 transition-colors cursor-pointer">
+                  <span>💬</span> <span>Reply</span>
+                </button>
+                <button type="button" onclick="copyPostLink(this)" class="inline-flex items-center gap-1 hover:text-lurnedia-greenLight transition-colors cursor-pointer">
+                  <span>🔗</span> <span>Copy...</span>
+                </button>
+              </div>
+              <button type="button" onclick="openStoryReplies('La Naranja', '@naranjan...')" class="w-full py-2 rounded-xl border border-lurnedia-border hover:border-lurnedia-greenLight text-xs font-bold text-sky-400 transition-colors cursor-pointer">
+                Read 2 replies
+              </button>
+            </div>
+          </article>
+
+          <!-- Tarjeta 4 -->
+          <article class="w-[300px] sm:w-[320px] shrink-0 bg-lurnedia-card border border-lurnedia-border rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80"
+                    alt="Trbureiyan"
+                    class="w-10 h-10 rounded-full object-cover shrink-0 border border-lurnedia-border"
+                    onerror="this.src='https://placehold.co/80x80/22C55E/08080A?text=TB'"
+                  />
+                  <div class="min-w-0">
+                    <p class="text-xs font-bold text-white truncate">Trbureiyan</p>
+                    <p class="text-[11px] text-gray-400 truncate">@trbureiyan • <button type="button" onclick="toggleFollowBtn(this)" class="text-sky-400 hover:underline font-semibold cursor-pointer">Follow</button></p>
+                  </div>
+                </div>
+                <span class="text-white font-extrabold text-base leading-none shrink-0">𝕏</span>
+              </div>
+
+              <p class="text-xs text-gray-200 leading-relaxed mb-4">
+                <span class="text-sky-400 font-medium">@lurnedia</span> ha sido un antes y un después en mi forma de ver el aprendizaje práctico y constante en tecnología.
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[11px] text-gray-400 mb-3">11:10 PM • Sep 14, 2024</p>
+              <div class="flex items-center gap-4 text-xs text-gray-300 mb-3 pt-2 border-t border-lurnedia-border/60">
+                <button type="button" onclick="togglePostLike(this, 11)" class="inline-flex items-center gap-1 hover:text-pink-400 transition-colors cursor-pointer">
+                  <span>♥</span> <span class="like-count font-semibold">11</span>
+                </button>
+                <button type="button" onclick="openStoryReplies('Trbureiyan', '@trbureiyan')" class="inline-flex items-center gap-1 hover:text-sky-400 transition-colors cursor-pointer">
+                  <span>💬</span> <span>Reply</span>
+                </button>
+                <button type="button" onclick="copyPostLink(this)" class="inline-flex items-center gap-1 hover:text-lurnedia-greenLight transition-colors cursor-pointer">
+                  <span>🔗</span> <span>Copy...</span>
+                </button>
+              </div>
+              <button type="button" onclick="openStoryReplies('Trbureiyan', '@trbureiyan')" class="w-full py-2 rounded-xl border border-lurnedia-border hover:border-lurnedia-greenLight text-xs font-bold text-sky-400 transition-colors cursor-pointer">
+                Read 2 replies
+              </button>
+            </div>
+          </article>
+
+          <!-- Tarjeta 5 -->
+          <article class="w-[300px] sm:w-[320px] shrink-0 bg-lurnedia-card border border-lurnedia-border rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80"
+                    alt="Fmaovs"
+                    class="w-10 h-10 rounded-full object-cover shrink-0 border border-lurnedia-border"
+                    onerror="this.src='https://placehold.co/80x80/22C55E/08080A?text=FM'"
+                  />
+                  <div class="min-w-0">
+                    <p class="text-xs font-bold text-white truncate">Fmaovs</p>
+                    <p class="text-[11px] text-gray-400 truncate">@fmaovs • <button type="button" onclick="toggleFollowBtn(this)" class="text-sky-400 hover:underline font-semibold cursor-pointer">Follow</button></p>
+                  </div>
+                </div>
+                <span class="text-white font-extrabold text-base leading-none shrink-0">𝕏</span>
+              </div>
+
+              <p class="text-xs text-gray-200 leading-relaxed mb-4">
+                <span class="text-sky-400 font-medium">@lurnedia</span> es para mí una gran plataforma para aprender porque los instructores logran transmitir conceptos complejos de manera clara y fácil de aplicar.
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[11px] text-gray-400 mb-3">4:26 PM • Jul 24, 2024</p>
+              <div class="flex items-center gap-4 text-xs text-gray-300 mb-3 pt-2 border-t border-lurnedia-border/60">
+                <button type="button" onclick="togglePostLike(this, 12)" class="inline-flex items-center gap-1 hover:text-pink-400 transition-colors cursor-pointer">
+                  <span>♥</span> <span class="like-count font-semibold">12</span>
+                </button>
+                <button type="button" onclick="openStoryReplies('Fmaovs', '@fmaovs')" class="inline-flex items-center gap-1 hover:text-sky-400 transition-colors cursor-pointer">
+                  <span>💬</span> <span>Reply</span>
+                </button>
+                <button type="button" onclick="copyPostLink(this)" class="inline-flex items-center gap-1 hover:text-lurnedia-greenLight transition-colors cursor-pointer">
+                  <span>🔗</span> <span>Copy...</span>
+                </button>
+              </div>
+              <button type="button" onclick="openStoryReplies('Fmaovs', '@fmaovs')" class="w-full py-2 rounded-xl border border-lurnedia-border hover:border-lurnedia-greenLight text-xs font-bold text-sky-400 transition-colors cursor-pointer">
+                Read 2 replies
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <button
+          type="button"
+          onclick="scrollSuccessCarousel()"
+          aria-label="Siguiente caso de éxito"
+          class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 hover:bg-lurnedia-greenLight text-black font-extrabold shadow-xl absolute right-2 top-1/2 -translate-y-1/2 z-10 transition-all cursor-pointer"
+        >
+          &rarr;
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES SOBRE LURNEDIA -->
+  <section id="preguntas-frecuentes" class="py-16 lg:py-20 bg-lurnedia-bg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white text-center mb-10">
+        Preguntas frecuentes sobre <span class="text-lurnedia-greenLight">Lurnedia</span>
+      </h2>
+
+      <div class="space-y-3" id="faqAccordion">
+        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden">
+          <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-bold text-white hover:text-lurnedia-greenLight transition-colors cursor-pointer">
+            <span>¿Cómo puedo empezar gratis en Lurnedia?</span>
+            <span class="faq-icon text-lurnedia-greenLight text-xl leading-none font-bold">+</span>
+          </button>
+          <div class="faq-panel hidden px-5 pb-4 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-lurnedia-border/60 pt-3">
+            Solo necesitas crear tu cuenta gratuita con tu correo electrónico o con Google para acceder de inmediato a clases gratuitas introductorias, explorar las escuelas y ver el temario de las rutas.
+          </div>
+        </div>
+
+        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden">
+          <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-bold text-white hover:text-lurnedia-greenLight transition-colors cursor-pointer">
+            <span>¿En qué horario son las clases en vivo de Lurnedia?</span>
+            <span class="faq-icon text-lurnedia-greenLight text-xl leading-none font-bold">+</span>
+          </button>
+          <div class="faq-panel hidden px-5 pb-4 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-lurnedia-border/60 pt-3">
+            Nuestras sesiones en vivo se transmiten en horario de tarde (14:00 a 19:00) de lunes a sábado, con práctica guiada, resolución de dudas y chat en tiempo real.
+          </div>
+        </div>
+
+        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden">
+          <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-bold text-white hover:text-lurnedia-greenLight transition-colors cursor-pointer">
+            <span>¿Qué diferencia hay entre el plan Basic, Expert y Expert Duo?</span>
+            <span class="faq-icon text-lurnedia-greenLight text-xl leading-none font-bold">+</span>
+          </button>
+          <div class="faq-panel hidden px-5 pb-4 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-lurnedia-border/60 pt-3">
+            El plan Basic incluye cursos fundamentales y certificados; Expert habilita todo el catálogo, rutas completas, descarga offline y mentorías; y Expert Duo otorga dos cuentas independientes con beneficios Expert.
+          </div>
+        </div>
+
+        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden">
+          <button type="button" onclick="toggleFaq(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-bold text-white hover:text-lurnedia-greenLight transition-colors cursor-pointer">
+            <span>¿Entregan certificados al completar los cursos y rutas?</span>
+            <span class="faq-icon text-lurnedia-greenLight text-xl leading-none font-bold">+</span>
+          </button>
+          <div class="faq-panel hidden px-5 pb-4 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-lurnedia-border/60 pt-3">
+            Sí. Al aprobar las evaluaciones y proyectos prácticos de cada curso o ruta, obtienes un certificado digital verificable que puedes compartir en tu perfil profesional o currículum.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#050507] border-t border-lurnedia-border pt-14 pb-10 text-sm text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-lurnedia-border">
+
+        <div class="lg:col-span-2">
+          <a href="#" class="flex items-center gap-2.5 mb-4">
+            <svg width="32" height="34" viewBox="0 0 100 106" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient id="lurnediaFooterGrad" x1="15" y1="8" x2="85" y2="96" gradientUnits="userSpaceOnUse">
+                <linearGradient id="footerLogoGrad" x1="15" y1="8" x2="85" y2="96" gradientUnits="userSpaceOnUse">
                   <stop offset="0%" stop-color="#4ADE80" />
                   <stop offset="100%" stop-color="#22C55E" />
                 </linearGradient>
               </defs>
-              <rect x="4" y="4" width="92" height="92" rx="22" fill="url(#lurnediaFooterGrad)" />
+              <rect x="4" y="4" width="92" height="92" rx="22" fill="url(#footerLogoGrad)" />
               <path d="M50 19C31.5 19 20 29.8 20 47.5C20 65.2 31.5 76 50 76H52.5L47.5 87.5L63.5 75.2C74.2 72.2 80 62.1 80 47.5C80 29.8 68.5 19 50 19Z" fill="#08080A" />
-              <path d="M39 33H47.5V54.5H62V62H39V33Z" fill="url(#lurnediaFooterGrad)" />
+              <path d="M39 33H47.5V54.5H62V62H39V33Z" fill="url(#footerLogoGrad)" />
             </svg>
-            <span class="text-xl font-extrabold tracking-tight text-white">Lurnedia</span>
+            <span class="text-xl font-extrabold text-lurnedia-wordmark">Lurnedia</span>
           </a>
-          <p class="text-sm text-gray-400 max-w-sm leading-relaxed mb-4">
-            Educación profesional continua en tecnología, inteligencia artificial, desarrollo de software y habilidades digitales.
+          <p class="text-xs text-gray-400 max-w-sm leading-relaxed mb-5">
+            Transformamos la economía de Latinoamérica formando a la próxima generación de profesionales en tecnología, innovación y negocios digitales.
           </p>
-          <p class="text-xs text-gray-500">hola@lurnedia.com • Comunidad Hispana de Tecnología</p>
+          <p class="text-xs font-semibold text-lurnedia-greenLight">Nunca pares de aprender.</p>
         </div>
 
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Plataforma</h4>
-          <ul class="space-y-2.5 text-sm text-gray-400">
-            <li><a href="#escuelas" class="hover:text-lurnedia-greenLight transition-colors">Escuelas</a></li>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider">Escuelas</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#escuelas" class="hover:text-lurnedia-greenLight transition-colors">Desarrollo Web</a></li>
+            <li><a href="#escuelas" class="hover:text-lurnedia-greenLight transition-colors">Inteligencia Artificial</a></li>
+            <li><a href="#escuelas" class="hover:text-lurnedia-greenLight transition-colors">Data Science e IA</a></li>
+            <li><a href="#escuelas" class="hover:text-lurnedia-greenLight transition-colors">Ciberseguridad</a></li>
+            <li><a href="#escuelas" class="hover:text-lurnedia-greenLight transition-colors">Diseño UX/UI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider">Comunidad</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#en-vivo-tarde" class="hover:text-lurnedia-greenLight transition-colors">Clases en vivo tarde</a></li>
+            <li><a href="#casos-de-exito" class="hover:text-lurnedia-greenLight transition-colors">Casos de éxito</a></li>
             <li><a href="#rutas" class="hover:text-lurnedia-greenLight transition-colors">Rutas de aprendizaje</a></li>
-            <li><a href="#cursos" class="hover:text-lurnedia-greenLight transition-colors">Catálogo de cursos</a></li>
-            <li><a href="#planes" class="hover:text-lurnedia-greenLight transition-colors">Planes y precios</a></li>
+            <li><a href="#planes" class="hover:text-lurnedia-greenLight transition-colors">Lurnedia Expert</a></li>
+            <li><a href="#empresas" class="hover:text-lurnedia-greenLight transition-colors">Lurnedia Empresas</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Organizaciones</h4>
-          <ul class="space-y-2.5 text-sm text-gray-400">
-            <li><a href="#empresas" class="hover:text-lurnedia-greenLight transition-colors">Lurnedia for Teams</a></li>
-            <li><a href="#empresas" class="hover:text-lurnedia-greenLight transition-colors">Capacitación corporativa</a></li>
-            <li><a href="#planes" class="hover:text-lurnedia-greenLight transition-colors">Plan Expert Duo</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Cuenta</h4>
-          <ul class="space-y-2.5 text-sm text-gray-400">
-            <li><button onclick="openModal('login')" class="hover:text-lurnedia-greenLight transition-colors cursor-pointer">Iniciar sesión</button></li>
-            <li><button onclick="openModal('register')" class="hover:text-lurnedia-greenLight transition-colors cursor-pointer">Crear cuenta gratis</button></li>
-            <li><a href="#top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" class="hover:text-lurnedia-greenLight transition-colors">Volver arriba</a></li>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider">Legal</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#preguntas-frecuentes" class="hover:text-lurnedia-greenLight transition-colors">Preguntas frecuentes</a></li>
+            <li><a href="#" class="hover:text-lurnedia-greenLight transition-colors">Términos y condiciones</a></li>
+            <li><a href="#" class="hover:text-lurnedia-greenLight transition-colors">Política de privacidad</a></li>
+            <li><a href="#" class="hover:text-lurnedia-greenLight transition-colors">Validar certificado</a></li>
           </ul>
         </div>
       </div>
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-        <p>&copy; <span id="currentYear">2026</span> Lurnedia. Todos los derechos reservados.</p>
-        <p>Hecho con enfoque en educación tecnológica de alto impacto.</p>
+        <p>© 2026 Lurnedia Inc. Todos los derechos reservados POR DANNER VASQUEZ.</p>
+        <p>Hecho con pasión por la educación tech.</p>
       </div>
     </div>
   </footer>
 
-  <!-- MODAL DE AUTENTICACIÓN (LOGIN / REGISTER) -->
-  <div id="authModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4" onclick="closeModalOnBackdrop(event, 'authModal')">
-    <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl max-w-md w-full p-6 sm:p-7 shadow-2xl modal-enter relative">
-      <button onclick="closeModal('authModal')" aria-label="Cerrar modal" class="absolute top-4 right-4 w-8 h-8 rounded-lg bg-[#08080A] border border-lurnedia-border text-gray-400 hover:text-white flex items-center justify-center cursor-pointer">
-        ✕
+  <!-- MODAL INTERACTIVO -->
+  <div id="appModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="modal-enter bg-lurnedia-card border border-lurnedia-border rounded-2xl max-w-md w-full p-6 sm:p-7 relative shadow-2xl">
+      <button onclick="closeModal()" aria-label="Cerrar ventana" class="absolute top-4 right-4 text-gray-400 hover:text-white p-1.5 rounded-lg hover:bg-white/5 cursor-pointer">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </button>
-
-      <div class="mb-6">
-        <span class="text-xs font-bold uppercase tracking-wider text-lurnedia-greenLight">Acceso a Lurnedia</span>
-        <h3 id="authModalTitle" class="text-2xl font-extrabold text-white mt-1">Inicia sesión</h3>
-        <p id="authModalSubtitle" class="text-sm text-gray-400 mt-1">Continúa tus rutas y clases donde lo dejaste.</p>
-      </div>
-
-      <form id="authForm" onsubmit="handleAuthSubmit(event)" class="space-y-4">
-        <div id="registerNameField" class="hidden">
-          <label class="block text-xs font-semibold text-gray-300 mb-1.5">Nombre completo</label>
-          <input
-            id="authNameInput"
-            type="text"
-            placeholder="Ej. Valeria Mendoza"
-            class="w-full bg-[#08080A] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none"
-          />
-        </div>
-
-        <div>
-          <label class="block text-xs font-semibold text-gray-300 mb-1.5">Correo electrónico</label>
-          <input
-            id="authEmailInput"
-            type="email"
-            required
-            placeholder="tu@correo.com"
-            class="w-full bg-[#08080A] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none"
-          />
-        </div>
-
-        <div>
-          <label class="block text-xs font-semibold text-gray-300 mb-1.5">Contraseña</label>
-          <input
-            id="authPasswordInput"
-            type="password"
-            required
-            minlength="6"
-            placeholder="Mínimo 6 caracteres"
-            class="w-full bg-[#08080A] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none"
-          />
-        </div>
-
-        <button id="authSubmitBtn" type="submit" class="w-full py-3 rounded-xl bg-lurnedia-gradient hover:brightness-110 text-black font-extrabold text-sm shadow-lg shadow-lurnedia-greenDark/25 transition-all cursor-pointer">
-          Entrar a mi cuenta
-        </button>
-      </form>
-
-      <div class="mt-5 pt-4 border-t border-lurnedia-border text-center text-xs text-gray-400">
-        <span id="authSwitchText">¿Aún no tienes cuenta?</span>
-        <button id="authSwitchBtn" type="button" onclick="toggleAuthMode()" class="text-lurnedia-greenLight font-bold hover:underline ml-1 cursor-pointer">
-          Crea una gratis
-        </button>
-      </div>
+      <div id="modalContent"></div>
     </div>
   </div>
 
-  <!-- MODAL DE VISTA PREVIA DE CURSO / RUTA -->
-  <div id="coursePreviewModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4" onclick="closeModalOnBackdrop(event, 'coursePreviewModal')">
-    <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl max-w-lg w-full p-6 sm:p-7 shadow-2xl modal-enter relative">
-      <button onclick="closeModal('coursePreviewModal')" aria-label="Cerrar vista previa" class="absolute top-4 right-4 w-8 h-8 rounded-lg bg-[#08080A] border border-lurnedia-border text-gray-400 hover:text-white flex items-center justify-center cursor-pointer">
-        ✕
-      </button>
-
-      <span id="previewSchoolBadge" class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight mb-3">
-        Escuela
-      </span>
-      <h3 id="previewCourseTitle" class="text-xl sm:text-2xl font-extrabold text-white mb-2">Título del curso</h3>
-      <p id="previewInstructor" class="text-xs text-gray-400 mb-5">Instructor • Clase introductoria</p>
-
-      <div class="bg-[#08080A] border border-lurnedia-border rounded-xl p-4 mb-6 space-y-3">
-        <div class="flex items-center justify-between text-xs text-lurnedia-greenLight font-semibold">
-          <span>▶ Módulo 1: Introducción práctica y arquitectura</span>
-          <span>12:40 min</span>
-        </div>
-        <p class="text-xs text-gray-300 leading-relaxed">
-          Comienza con un escenario real paso a paso, configura tu entorno de trabajo y construye los primeros componentes funcionales desde la primera lección.
-        </p>
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-3">
-        <button onclick="closeModal('coursePreviewModal'); openModal('register');" class="flex-1 py-3 rounded-xl bg-lurnedia-gradient hover:brightness-110 text-black font-extrabold text-sm transition-all cursor-pointer">
-          Comenzar este curso gratis
-        </button>
-        <button onclick="closeModal('coursePreviewModal')" class="px-5 py-3 rounded-xl border border-lurnedia-border hover:border-lurnedia-greenLight text-sm font-semibold text-gray-300 transition-colors cursor-pointer">
-          Cerrar
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- NOTIFICACIÓN TOAST (SIN ALERT) -->
-  <div id="toastBanner" class="fixed bottom-5 right-5 z-50 hidden max-w-sm bg-lurnedia-card border border-lurnedia-greenLight text-white px-4 py-3.5 rounded-2xl shadow-2xl items-center gap-3 modal-enter">
-    <span class="w-6 h-6 rounded-full bg-lurnedia-gradient text-black font-extrabold text-xs flex items-center justify-center shrink-0">✓</span>
-    <p id="toastMessage" class="text-xs sm:text-sm font-medium text-gray-100"></p>
-  </div>
-
+  <!-- JAVASCRIPT INTERACTIVO -->
   <script>
-    // =========================================================================
-    // DATOS DE ESCUELAS (22 ESCUELAS ESPECIALIZADAS)
-    // =========================================================================
-    const SCHOOLS_DATA = [
-      { name: 'Inteligencia Artificial', courses: 145, cat: 'ia', icon: '🤖' },
-      { name: 'Desarrollo Web', courses: 190, cat: 'dev', icon: '💻' },
-      { name: 'Data Science & BI', courses: 130, cat: 'data', icon: '📊' },
-      { name: 'Cloud Computing', courses: 95, cat: 'data', icon: '☁️' },
-      { name: 'Diseño UX/UI', courses: 110, cat: 'design', icon: '🎨' },
-      { name: 'Ciberseguridad', courses: 88, cat: 'data', icon: '🛡️' },
-      { name: 'Frontend & React', courses: 120, cat: 'dev', icon: '⚛️' },
-      { name: 'Backend & APIs', courses: 115, cat: 'dev', icon: '⚙️' },
-      { name: 'Machine Learning', courses: 92, cat: 'ia', icon: '🧠' },
-      { name: 'Prompt Engineering', courses: 64, cat: 'ia', icon: '✨' },
-      { name: 'DevOps & Docker', courses: 84, cat: 'data', icon: '🐳' },
-      { name: 'Desarrollo Móvil', courses: 78, cat: 'dev', icon: '📱' },
-      { name: 'Bases de Datos & SQL', courses: 74, cat: 'data', icon: '🗄️' },
-      { name: 'Design Systems', courses: 52, cat: 'design', icon: '📐' },
-      { name: 'Product Management', courses: 68, cat: 'design', icon: '🚀' },
-      { name: 'Automatización & No-Code', courses: 60, cat: 'ia', icon: '⚡' },
-      { name: 'Arquitectura de Software', courses: 72, cat: 'dev', icon: '🏗️' },
-      { name: 'Ingeniería de Datos', courses: 81, cat: 'data', icon: '🔄' },
-      { name: 'Inglés Técnico', courses: 96, cat: 'dev', icon: '🌐' },
-      { name: 'Liderazgo Tech', courses: 55, cat: 'design', icon: '🧭' },
-      { name: 'Testing & QA', courses: 62, cat: 'dev', icon: '🧪' },
-      { name: 'Startups & Growth', courses: 66, cat: 'design', icon: '📈' }
-    ];
-
-    // =========================================================================
-    // DATOS DE CURSOS POPULARES
-    // =========================================================================
-    const COURSES_DATA = [
-      {
-        title: 'Arquitectura de Agentes de IA con Python',
-        school: 'Inteligencia Artificial',
-        instructor: 'Carlos Mendoza',
-        duration: '6h 30m',
-        level: 'Intermedio',
-        cat: 'ia',
-        image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80'
-      },
-      {
-        title: 'React, TypeScript y Next.js desde Cero',
-        school: 'Desarrollo Web',
-        instructor: 'Lucía Fernández',
-        duration: '9h 15m',
-        level: 'Principiante',
-        cat: 'dev',
-        image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80'
-      },
-      {
-        title: 'SQL Avanzado y Modelado de Datos en la Nube',
-        school: 'Data & Cloud',
-        instructor: 'Mateo Villalobos',
-        duration: '7h 45m',
-        level: 'Intermedio',
-        cat: 'data',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
-      },
-      {
-        title: 'Diseño de Interfaces y Sistemas en Figma',
-        school: 'Diseño UX/UI',
-        instructor: 'Sofía Herrera',
-        duration: '5h 50m',
-        level: 'Principiante',
-        cat: 'design',
-        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80'
-      },
-      {
-        title: 'Sistemas RAG y Búsqueda Semántica con LLMs',
-        school: 'Inteligencia Artificial',
-        instructor: 'Valeria Soto',
-        duration: '5h 20m',
-        level: 'Avanzado',
-        cat: 'ia',
-        image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80'
-      },
-      {
-        title: 'Node.js, REST APIs y Microservicios Escalables',
-        school: 'Desarrollo Web',
-        instructor: 'Andrés Salazar',
-        duration: '8h 10m',
-        level: 'Intermedio',
-        cat: 'dev',
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'
-      },
-      {
-        title: 'Kubernetes, Docker y Despliegue Cloud',
-        school: 'Data & Cloud',
-        instructor: 'Javier Ortiz',
-        duration: '7h 05m',
-        level: 'Intermedio',
-        cat: 'data',
-        image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=800&q=80'
-      },
-      {
-        title: 'UX Research y Prototipado de Productos Digitales',
-        school: 'Diseño UX/UI',
-        instructor: 'Mariana Castro',
-        duration: '4h 40m',
-        level: 'Todos los niveles',
-        cat: 'design',
-        image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80'
-      }
-    ];
-
-    // Estado de la aplicación
-    let currentCategory = 'all';
-    let currentSearchQuery = '';
-    let authMode = 'login';
-    let toastTimeoutId = null;
-    let countdownIntervalId = null;
-
-    // Clases interactivas dentro del celular del banner superior
-    const PHONE_LESSONS = {
+    const phoneLessons = {
       ia: {
-        title: 'Prompts Efectivos para Trabajo Remoto',
-        teacher: 'Valeria Soto • Escuela de IA',
-        duration: '08:15',
-        badge: 'CLASE EN VIVO',
-        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80',
-        school: 'Escuela de Inteligencia Artificial'
+        title: "Prompts Efectivos para Trabajo Remoto",
+        teacher: "Valeria Soto",
+        school: "Escuela de Inteligencia Artificial",
+        duration: "08:15",
+        badge: "CLASE EN VIVO",
+        img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
       },
       ingles: {
-        title: 'Inglés para Entrevistas Tech y Daily Meetings',
-        teacher: 'Gina Pedraza • Escuela de Inglés',
-        duration: '06:40',
-        badge: 'CLASE GRATIS',
-        image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=700&q=80',
-        school: 'Escuela de Inglés Técnico'
+        title: "Inglés Conversacional para Entrevistas Tech",
+        teacher: "Gina Pedraza",
+        school: "Escuela de Inglés Técnico",
+        duration: "11:40",
+        badge: "GRATIS • HOY",
+        img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=700&q=80"
       },
       dev: {
-        title: 'Componentes React Modernos en 8 Minutos',
-        teacher: 'Lucía Fernández • Desarrollo Web',
-        duration: '08:05',
-        badge: 'RUTA DEV',
-        image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=700&q=80',
-        school: 'Escuela de Desarrollo Web'
+        title: "Componentes React + Tailwind en 10 Minutos",
+        teacher: "Javier Morales",
+        school: "Escuela de Desarrollo Web",
+        duration: "10:05",
+        badge: "PRÁCTICA EXPRESS",
+        img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
       }
     };
-    const PHONE_LESSON_KEYS = Object.keys(PHONE_LESSONS);
-    let activePhoneLessonKey = 'ia';
 
-    // =========================================================================
-    // CONTADOR REGRESIVO EN VIVO (DÍAS : HORAS : MINUTOS : SEGUNDOS)
-    // =========================================================================
-    function startPromoCountdown() {
-      // Inicia en 10 horas, 00 minutos y 09 segundos como referencia visual
-      const initialDurationMs = ((10 * 60 + 0) * 60 + 9) * 1000;
-      const targetTimestamp = Date.now() + initialDurationMs;
+    const phoneTabOrder = ['ia', 'ingles', 'dev'];
+    let activePhoneTab = 'ia';
 
-      const updateTimer = () => {
-        const remainingMs = Math.max(0, targetTimestamp - Date.now());
-        const totalSeconds = Math.floor(remainingMs / 1000);
+    function selectPhoneLesson(tabKey) {
+      const lesson = phoneLessons[tabKey];
+      if (!lesson) return;
+      activePhoneTab = tabKey;
 
-        const days = Math.floor(totalSeconds / 86400);
-        const hours = Math.floor((totalSeconds % 86400) / 3600);
-        const minutes = Math.floor((totalSeconds % 3600) / 60);
-        const seconds = totalSeconds % 60;
-
-        const pad = (n) => String(n).padStart(2, '0');
-
-        const dEl = document.getElementById('cdDays');
-        const hEl = document.getElementById('cdHours');
-        const mEl = document.getElementById('cdMinutes');
-        const sEl = document.getElementById('cdSeconds');
-
-        if (dEl) dEl.textContent = `${pad(days)}d`;
-        if (hEl) hEl.textContent = `${pad(hours)}h`;
-        if (mEl) mEl.textContent = `${pad(minutes)}m`;
-        if (sEl) sEl.textContent = `${pad(seconds)}s`;
-
-        const clockEl = document.getElementById('phoneClock');
-        if (clockEl) {
-          const now = new Date();
-          clockEl.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
+      document.querySelectorAll('.phone-tab').forEach(btn => {
+        if (btn.dataset.phoneTab === tabKey) {
+          btn.className = 'phone-tab py-1.5 rounded-lg bg-lurnedia-gradient text-black transition-all cursor-pointer';
+        } else {
+          btn.className = 'phone-tab py-1.5 rounded-lg text-gray-400 hover:text-white transition-all cursor-pointer';
         }
-      };
-
-      updateTimer();
-      if (countdownIntervalId) clearInterval(countdownIntervalId);
-      countdownIntervalId = setInterval(updateTimer, 1000);
-    }
-
-    // =========================================================================
-    // INTERACTIVIDAD DEL CELULAR EN EL BANNER PROMOCIONAL
-    // =========================================================================
-    function selectPhoneLesson(key) {
-      if (!PHONE_LESSONS[key]) return;
-      activePhoneLessonKey = key;
-      const lesson = PHONE_LESSONS[key];
-
-      document.querySelectorAll('.phone-tab').forEach((btn) => {
-        const isSelected = btn.getAttribute('data-phone-tab') === key;
-        btn.className = isSelected
-          ? 'phone-tab py-1.5 rounded-lg bg-lurnedia-gradient text-black transition-all cursor-pointer'
-          : 'phone-tab py-1.5 rounded-lg text-gray-400 hover:text-white transition-all cursor-pointer';
       });
 
       const imgEl = document.getElementById('phoneLessonImg');
-      const badgeEl = document.getElementById('phoneLessonBadge');
-      const durEl = document.getElementById('phoneLessonDuration');
-      const titleEl = document.getElementById('phoneLessonTitle');
-      const teacherEl = document.getElementById('phoneLessonTeacher');
-
       if (imgEl) {
-        imgEl.src = lesson.image;
+        imgEl.src = lesson.img;
         imgEl.alt = lesson.title;
       }
-      if (badgeEl) badgeEl.textContent = lesson.badge;
-      if (durEl) durEl.textContent = lesson.duration;
-      if (titleEl) titleEl.textContent = lesson.title;
-      if (teacherEl) teacherEl.textContent = `${lesson.teacher} • Toca para abrir vista previa`;
+      document.getElementById('phoneLessonBadge').textContent = lesson.badge;
+      document.getElementById('phoneLessonDuration').textContent = lesson.duration;
+      document.getElementById('phoneLessonTitle').textContent = lesson.title;
+      document.getElementById('phoneLessonTeacher').textContent = `${lesson.teacher} • Toca para abrir vista previa`;
     }
 
     function cyclePhoneLesson() {
-      const idx = PHONE_LESSON_KEYS.indexOf(activePhoneLessonKey);
-      const nextKey = PHONE_LESSON_KEYS[(idx + 1) % PHONE_LESSON_KEYS.length];
-      selectPhoneLesson(nextKey);
+      const nextIdx = (phoneTabOrder.indexOf(activePhoneTab) + 1) % phoneTabOrder.length;
+      selectPhoneLesson(phoneTabOrder[nextIdx]);
     }
 
     function openActivePhoneCourse() {
-      const lesson = PHONE_LESSONS[activePhoneLessonKey] || PHONE_LESSONS.ia;
+      const lesson = phoneLessons[activePhoneTab];
       openCoursePreview(lesson.title, lesson.teacher, lesson.school);
     }
 
-    function handlePhoneSearch(event) {
-      event.preventDefault();
-      const input = document.getElementById('phoneSearchInput');
-      const term = input ? input.value.trim() : '';
-      currentSearchQuery = term;
-
+    function handlePhoneSearch(e) {
+      e.preventDefault();
+      const query = document.getElementById('phoneSearchInput').value.trim();
       const globalInput = document.getElementById('globalSearchInput');
-      const coursesInput = document.getElementById('coursesSearchInput');
-      if (globalInput) globalInput.value = term;
-      if (coursesInput) coursesInput.value = term;
+      if (globalInput) globalInput.value = query;
+      const activeCat = document.querySelector('.cat-btn.active')?.dataset.cat || 'all';
+      renderCourses(activeCat, query);
+      document.getElementById('cursos').scrollIntoView({ behavior: 'smooth' });
+    }
 
-      filterCourses(currentCategory);
-      const cursosSection = document.getElementById('cursos');
-      if (cursosSection) {
-        cursosSection.scrollIntoView({ behavior: 'smooth' });
-      }
-      if (term) {
-        showToast(`Buscando cursos relacionados con "${term}"...`);
+    let remainingSeconds = (10 * 3600) + 9;
+    function updateCountdown() {
+      const days = Math.floor(remainingSeconds / 86400);
+      const hours = Math.floor((remainingSeconds % 86400) / 3600);
+      const minutes = Math.floor((remainingSeconds % 3600) / 60);
+      const seconds = remainingSeconds % 60;
+
+      const pad = n => String(n).padStart(2, '0');
+      const dEl = document.getElementById('cdDays');
+      const hEl = document.getElementById('cdHours');
+      const mEl = document.getElementById('cdMinutes');
+      const sEl = document.getElementById('cdSeconds');
+
+      if (dEl) dEl.textContent = `${pad(days)}d`;
+      if (hEl) hEl.textContent = `${pad(hours)}h`;
+      if (mEl) mEl.textContent = `${pad(minutes)}m`;
+      if (sEl) sEl.textContent = `${pad(seconds)}s`;
+
+      if (remainingSeconds > 0) {
+        remainingSeconds--;
+      } else {
+        remainingSeconds = (10 * 3600) + 9;
       }
     }
 
-    function handleGoogleQuickStart() {
-      openModal('register');
-      showToast('Inicia tu registro rápido con Google en un paso.');
-    }
+    const schoolsData = [
+      { name: "Inteligencia Artificial", courses: "64 cursos", icon: "🤖", cat: "ia" },
+      { name: "Desarrollo Web", courses: "142 cursos", icon: "💻", cat: "dev" },
+      { name: "Data Science e IA", courses: "89 cursos", icon: "📊", cat: "data" },
+      { name: "Ciberseguridad", courses: "48 cursos", icon: "🛡️", cat: "dev" },
+      { name: "Cloud Computing & DevOps", courses: "53 cursos", icon: "☁️", cat: "data" },
+      { name: "Diseño de Producto & UX", courses: "61 cursos", icon: "🎨", cat: "design" },
+      { name: "English Academy", courses: "75 cursos", icon: "🌎", cat: "all" },
+      { name: "Startups & Liderazgo", courses: "94 cursos", icon: "🚀", cat: "all" }
+    ];
 
-    // =========================================================================
-    // RENDERIZADO DE ESCUELAS
-    // =========================================================================
+    const liveClassesByDay = {
+      lunes: [
+        { time: "15:00 – 16:30", status: "Hoy en la tarde", title: "Fundamentos de LLMs y Prompts en Producción", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", room: "Sala IA-01" },
+        { time: "16:45 – 18:00", status: "Tarde • Práctica", title: "Maquetación Responsiva con Flexbox, Grid y Tailwind", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", room: "Sala Web-02" },
+        { time: "18:15 – 19:00", status: "Cierre de tarde", title: "Consultas SQL en Vivo para Análisis de Datos", teacher: "Valeria Ríos", school: "Escuela de Data Science", room: "Sala Data-01" }
+      ],
+      martes: [
+        { time: "14:30 – 16:00", status: "Tarde • En vivo", title: "Arquitectura de APIs REST con Node.js y TypeScript", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", room: "Sala Web-01" },
+        { time: "16:15 – 17:30", status: "Tarde • Taller", title: "Automatización de Flujos con Python y Webhooks", teacher: "Sofía Delgado", school: "Escuela de Automatización", room: "Sala Dev-03" },
+        { time: "17:45 – 19:00", status: "Cierre de tarde", title: "Design Systems y Componentes Escalables en Figma", teacher: "Camila Torres", school: "Escuela de Diseño UX/UI", room: "Sala UX-01" }
+      ],
+      miercoles: [
+        { time: "15:00 – 16:15", status: "Tarde • En vivo", title: "RAG (Retrieval-Augmented Generation) Paso a Paso", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", room: "Sala IA-02" },
+        { time: "16:30 – 17:45", status: "Tarde • Lab", title: "Despliegue Seguro en la Nube y Variables de Entorno", teacher: "Andrés Paredes", school: "Escuela de Cloud & DevOps", room: "Sala Cloud-01" },
+        { time: "18:00 – 19:00", status: "Cierre de tarde", title: "Inglés Técnico para Reuniones de Producto y Scrum", teacher: "Gina Pedraza", school: "English Academy", room: "Sala Eng-01" }
+      ],
+      jueves: [
+        { time: "14:30 – 16:00", status: "Tarde • En vivo", title: "Limpieza y Visualización de Datos con Pandas & Power BI", teacher: "Valeria Ríos", school: "Escuela de Data Science", room: "Sala Data-02" },
+        { time: "16:15 – 17:30", status: "Tarde • Práctica", title: "Estado Global, Hooks y Rendimiento en React 19", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", room: "Sala Web-02" },
+        { time: "17:45 – 19:00", status: "Cierre de tarde", title: "Seguridad Web: Autenticación, JWT y Prevención OWASP", teacher: "Andrés Paredes", school: "Escuela de Ciberseguridad", room: "Sala Sec-01" }
+      ],
+      viernes: [
+        { time: "15:00 – 16:30", status: "Tarde • Demo Day", title: "Construyendo un Agente de IA con Herramientas Externas", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", room: "Sala IA-01" },
+        { time: "16:45 – 18:00", status: "Tarde • Portafolio", title: "Revisión de Código y Buenas Prácticas Git en Equipo", teacher: "Sofía Delgado", school: "Escuela de Desarrollo Web", room: "Sala Dev-01" },
+        { time: "18:15 – 19:00", status: "Cierre de semana", title: "Cómo Preparar Entrevistas Técnicas y Salariales", teacher: "Camila Torres", school: "Startups & Liderazgo", room: "Sala Career-01" }
+      ],
+      sabado: [
+        { time: "14:00 – 15:30", status: "Sábado tarde", title: "Maratón Práctica: De la Idea al Prototipo Web", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", room: "Sala Hack-01" },
+        { time: "15:45 – 17:15", status: "Sábado tarde", title: "Taller de IA Aplicada a Productividad y Negocios", teacher: "Valeria Ríos", school: "Escuela de Inteligencia Artificial", room: "Sala IA-03" },
+        { time: "17:30 – 18:45", status: "Cierre sábado", title: "Clínica de Proyectos de Estudiantes en Vivo", teacher: "Equipo Lurnedia", school: "Comunidad Lurnedia", room: "Auditorio Live" }
+      ]
+    };
+
+    const coursesData = [
+      { title: "Curso de Python desde Cero hasta Profesional", teacher: "Sofía Delgado", school: "Escuela de Desarrollo Web", level: "Básico", duration: "16 hrs", cat: "dev", rating: "4.9" },
+      { title: "Curso Práctico de ChatGPT, LLMs y Prompt Engineering", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", level: "Básico", duration: "10 hrs", cat: "ia", rating: "5.0" },
+      { title: "Curso de React.js y TypeScript Moderno", teacher: "Javier Morales", school: "Escuela de Desarrollo Web", level: "Intermedio", duration: "22 hrs", cat: "dev", rating: "4.9" },
+      { title: "Curso de Análisis de Datos con SQL y Power BI", teacher: "Valeria Ríos", school: "Escuela de Data Science", level: "Básico", duration: "14 hrs", cat: "data", rating: "4.8" },
+      { title: "Curso de Creación de Agentes de IA con LangChain", teacher: "Carlos Mendoza", school: "Escuela de Inteligencia Artificial", level: "Avanzado", duration: "18 hrs", cat: "ia", rating: "4.9" },
+      { title: "Curso de Sistemas de Diseño en Figma", teacher: "Camila Torres", school: "Escuela de Diseño UX/UI", level: "Intermedio", duration: "12 hrs", cat: "design", rating: "4.9" },
+      { title: "Curso de Arquitectura Cloud en AWS", teacher: "Andrés Paredes", school: "Escuela de Cloud & DevOps", level: "Intermedio", duration: "19 hrs", cat: "data", rating: "4.8" },
+      { title: "Curso de Diseño de Interfaces UI con Tailwind CSS", teacher: "Camila Torres", school: "Escuela de Diseño UX/UI", level: "Básico", duration: "11 hrs", cat: "design", rating: "5.0" }
+    ];
+
     function renderSchools() {
-      const grid = document.getElementById('schoolsGrid');
-      if (!grid) return;
-
-      grid.innerHTML = SCHOOLS_DATA.map((school) => `
-        <button
-          type="button"
-          onclick="filterCourses('${school.cat}'); document.getElementById('cursos').scrollIntoView({ behavior: 'smooth' });"
-          class="bg-lurnedia-card border border-lurnedia-border hover:bg-lurnedia-cardHover rounded-2xl p-4 text-left card-hover flex items-center justify-between gap-3 group cursor-pointer"
-        >
-          <div class="flex items-center gap-3 min-w-0">
-            <div class="w-10 h-10 rounded-xl bg-[#08080A] border border-lurnedia-border group-hover:border-lurnedia-greenLight/50 flex items-center justify-center text-lg shrink-0 transition-colors">
-              ${school.icon}
-            </div>
-            <div class="min-w-0">
-              <h3 class="text-sm font-bold text-white group-hover:text-lurnedia-greenLight transition-colors truncate">
-                ${school.name}
-              </h3>
-              <p class="text-xs text-gray-400">${school.courses} cursos</p>
-            </div>
+      const container = document.getElementById('schoolsGrid');
+      container.innerHTML = schoolsData.map(school => `
+        <div onclick="filterCourses('${school.cat}'); document.getElementById('cursos').scrollIntoView({ behavior: 'smooth', block: 'nearest' });" class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-5 card-hover cursor-pointer flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-[#08080A] border border-lurnedia-border flex items-center justify-center text-2xl shrink-0">
+            ${school.icon}
           </div>
-          <span class="text-gray-500 group-hover:text-lurnedia-greenLight transition-colors text-sm shrink-0">&rarr;</span>
-        </button>
+          <div>
+            <h3 class="text-sm font-bold text-white leading-snug">${school.name}</h3>
+            <p class="text-xs text-lurnedia-greenLight font-medium mt-0.5">${school.courses}</p>
+          </div>
+        </div>
       `).join('');
     }
 
-    // =========================================================================
-    // RENDERIZADO Y FILTRADO DE CURSOS
-    // =========================================================================
-    function renderCourses(coursesList = COURSES_DATA) {
-      const grid = document.getElementById('coursesGrid');
-      const countLabel = document.getElementById('courseCountLabel');
-      if (!grid) return;
+    function renderLiveClasses(day = 'lunes') {
+      const container = document.getElementById('liveClassesGrid');
+      const classesForDay = liveClassesByDay[day] || liveClassesByDay.lunes;
 
-      if (countLabel) {
-        countLabel.textContent = `Mostrando ${coursesList.length} ${coursesList.length === 1 ? 'curso' : 'cursos'}`;
-      }
+      document.querySelectorAll('.day-tab').forEach(btn => {
+        if (btn.dataset.day === day) {
+          btn.className = 'day-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-lurnedia-gradient text-black transition-all shrink-0 cursor-pointer';
+        } else {
+          btn.className = 'day-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer';
+        }
+      });
 
-      if (coursesList.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full bg-lurnedia-card border border-lurnedia-border rounded-2xl p-10 text-center">
-            <p class="text-base font-bold text-white mb-2">No encontramos cursos con ese criterio</p>
-            <p class="text-sm text-gray-400 mb-5">Prueba con otra palabra clave o restablece los filtros activos.</p>
-            <button onclick="resetCourseFilters()" class="px-5 py-2.5 rounded-xl bg-lurnedia-gradient text-black font-bold text-xs cursor-pointer">
-              Ver todos los cursos
+      container.innerHTML = classesForDay.map(item => `
+        <div class="bg-lurnedia-card border border-lurnedia-border rounded-2xl p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-lurnedia-greenDark/15 text-lurnedia-greenLight border border-lurnedia-greenLight/25">
+                <span class="w-1.5 h-1.5 rounded-full bg-lurnedia-greenLight"></span>
+                ${item.status}
+              </span>
+              <span class="text-xs font-mono font-bold text-gray-300 bg-[#08080A] px-2.5 py-1 rounded-lg border border-lurnedia-border">
+                ${item.time}
+              </span>
+            </div>
+
+            <p class="text-[11px] font-semibold text-lurnedia-greenLight uppercase tracking-wider mb-1">
+              ${item.school}
+            </p>
+            <h3 class="text-lg font-bold text-white leading-snug mb-2">
+              ${item.title}
+            </h3>
+            <p class="text-xs text-gray-400">
+              Profesor: <strong class="text-gray-200">${item.teacher}</strong> • <span class="text-gray-500">${item.room}</span>
+            </p>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-lurnedia-border/70 flex items-center justify-between gap-3">
+            <span class="text-xs text-gray-400">Chat y Q&A en vivo</span>
+            <button
+              type="button"
+              onclick="openLiveReminderModal('${day}', '${item.time}', '${item.title}', '${item.teacher}')"
+              class="px-4 py-2 rounded-xl bg-lurnedia-gradient hover:brightness-110 text-black font-extrabold text-xs transition-all cursor-pointer"
+            >
+              Reservar cupo
             </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.querySelectorAll('.day-tab').forEach(btn => {
+      btn.addEventListener('click', () => renderLiveClasses(btn.dataset.day));
+    });
+
+    function openLiveReminderModal(day, time, title, teacher) {
+      const modal = document.getElementById('appModal');
+      const content = document.getElementById('modalContent');
+      const dayLabel = day.charAt(0).toUpperCase() + day.slice(1);
+
+      content.innerHTML = `
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-lurnedia-greenDark/20 text-lurnedia-greenLight mb-2">
+            Clase en Vivo • ${dayLabel} (${time})
+          </span>
+          <h3 class="text-xl font-extrabold text-white mt-1 mb-1.5">${title}</h3>
+          <p class="text-xs text-gray-400 mb-5">Dictada en la tarde por <strong class="text-gray-200">${teacher}</strong></p>
+
+          <form onsubmit="submitAuthForm(event, '¡Cupo reservado para la clase de la tarde!')" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 mb-1.5">Tu correo para recibir el enlace de la sala</label>
+              <input type="email" required placeholder="tu@correo.com" class="w-full bg-[#08080A] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl px-4 py-3 text-sm text-white focus:outline-none" />
+            </div>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-lurnedia-gradient hover:brightness-110 text-black font-extrabold text-sm transition-all cursor-pointer">
+              Confirmar recordatorio en vivo
+            </button>
+          </form>
+        </div>
+      `;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function renderCourses(filter = 'all', searchTerm = '') {
+      const container = document.getElementById('coursesGrid');
+      const filtered = coursesData.filter(c => {
+        const matchesCat = filter === 'all' || c.cat === filter;
+        const matchesSearch =
+          c.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          c.school.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          c.teacher.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesCat && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-12 bg-lurnedia-card border border-lurnedia-border rounded-2xl">
+            <p class="text-gray-300 font-semibold">No encontramos cursos para "${searchTerm}"</p>
+            <button onclick="resetSearch()" class="mt-3 text-xs font-bold text-lurnedia-greenLight hover:underline cursor-pointer">Limpiar búsqueda</button>
           </div>
         `;
         return;
       }
 
-      grid.innerHTML = coursesList.map((course) => {
-        const safeTitle = course.title.replace(/'/g, "\\'");
-        const safeInstructor = course.instructor.replace(/'/g, "\\'");
-        const safeSchool = course.school.replace(/'/g, "\\'");
-
-        return `
-          <article
-            onclick="openCoursePreview('${safeTitle}', '${safeInstructor}', '${safeSchool}')"
-            class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden card-hover flex flex-col justify-between cursor-pointer group"
-          >
-            <div>
-              <div class="aspect-video relative bg-[#08080A] overflow-hidden">
-                <img
-                  src="${course.image}"
-                  alt="${course.title}"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://placehold.co/800x450/111317/4ADE80?text=Lurnedia+Curso'"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-lurnedia-card via-transparent to-black/25"></div>
-                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-[#08080A]/85 border border-lurnedia-border text-lurnedia-greenLight">
-                  ${course.school}
+      container.innerHTML = filtered.map(course => `
+        <div onclick="openCoursePreview('${course.title}', '${course.teacher}', '${course.school}')" class="bg-lurnedia-card border border-lurnedia-border rounded-2xl overflow-hidden card-hover cursor-pointer flex flex-col justify-between group">
+          <div>
+            <div class="h-32 bg-gradient-to-br from-[#0F2418] via-[#11151B] to-[#08080A] p-4 flex flex-col justify-between border-b border-lurnedia-border relative">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-black/60 text-lurnedia-greenLight border border-lurnedia-greenLight/30">
+                  ${course.level}
                 </span>
+                <span class="text-xs font-bold text-yellow-400">★ ${course.rating}</span>
               </div>
-
-              <div class="p-5 pb-3">
-                <div class="flex items-center justify-between text-[11px] text-gray-400 mb-2">
-                  <span>${course.level}</span>
-                  <span>${course.duration}</span>
-                </div>
-                <h3 class="text-base font-bold text-white group-hover:text-lurnedia-greenLight transition-colors line-clamp-2 leading-snug">
-                  ${course.title}
-                </h3>
-              </div>
+              <span class="text-[11px] font-medium text-gray-400">${course.school}</span>
             </div>
 
-            <div class="px-5 pb-5 pt-2 flex items-center justify-between border-t border-lurnedia-border/60 mt-2">
-              <span class="text-xs text-gray-400 truncate pr-2">${course.instructor}</span>
-              <span class="text-xs font-bold text-lurnedia-greenLight shrink-0 group-hover:translate-x-0.5 transition-transform">
-                Ver clase &rarr;
-              </span>
+            <div class="p-5">
+              <h3 class="text-base font-bold text-white group-hover:text-lurnedia-greenLight transition-colors line-clamp-2 mb-2">
+                ${course.title}
+              </h3>
+              <p class="text-xs text-gray-400">Por <span class="text-gray-200 font-medium">${course.teacher}</span></p>
             </div>
-          </article>
-        `;
-      }).join('');
+          </div>
+
+          <div class="px-5 pb-4 pt-2 border-t border-lurnedia-border/60 flex items-center justify-between text-xs text-gray-400">
+            <span>⏱ ${course.duration}</span>
+            <span class="font-bold text-lurnedia-greenLight group-hover:translate-x-1 transition-transform">Ver curso &rarr;</span>
+          </div>
+        </div>
+      `).join('');
     }
 
-    function filterCourses(category = currentCategory) {
-      currentCategory = category;
-
-      // Actualizar estado visual de los botones de categoría
-      const buttons = document.querySelectorAll('#categoryTabs .cat-btn');
-      buttons.forEach((btn) => {
-        const isActive = btn.getAttribute('data-cat') === category;
-        if (isActive) {
+    function filterCourses(cat) {
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
           btn.className = 'cat-btn active px-4 py-2 rounded-xl text-xs font-bold bg-lurnedia-gradient text-black transition-all shrink-0 cursor-pointer';
         } else {
           btn.className = 'cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-lurnedia-card text-gray-300 border border-lurnedia-border hover:border-lurnedia-greenLight transition-all shrink-0 cursor-pointer';
         }
       });
-
-      const query = currentSearchQuery.trim().toLowerCase();
-      const filtered = COURSES_DATA.filter((course) => {
-        const matchesCat = category === 'all' || course.cat === category;
-        const matchesQuery =
-          !query ||
-          course.title.toLowerCase().includes(query) ||
-          course.school.toLowerCase().includes(query) ||
-          course.instructor.toLowerCase().includes(query) ||
-          course.level.toLowerCase().includes(query);
-        return matchesCat && matchesQuery;
-      });
-
-      renderCourses(filtered);
+      renderCourses(cat, document.getElementById('globalSearchInput').value);
     }
 
-    function resetCourseFilters() {
-      currentSearchQuery = '';
-      const globalInput = document.getElementById('globalSearchInput');
-      const coursesInput = document.getElementById('coursesSearchInput');
-      if (globalInput) globalInput.value = '';
-      if (coursesInput) coursesInput.value = '';
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterCourses(btn.dataset.cat);
+        document.getElementById('cursos').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+
+    document.getElementById('globalSearchInput').addEventListener('input', (e) => {
+      const activeCat = document.querySelector('.cat-btn.active')?.dataset.cat || 'all';
+      renderCourses(activeCat, e.target.value);
+    });
+
+    function resetSearch() {
+      document.getElementById('globalSearchInput').value = '';
       filterCourses('all');
     }
 
-    // =========================================================================
-    // MODAL DE VISTA PREVIA DE CURSO
-    // =========================================================================
-    function openCoursePreview(title, instructor, school) {
-      const modal = document.getElementById('coursePreviewModal');
-      if (!modal) return;
+    function setBilling(type) {
+      const btnAnnual = document.getElementById('btnAnnual');
+      const btnMonthly = document.getElementById('btnMonthly');
 
-      document.getElementById('previewCourseTitle').textContent = title;
-      document.getElementById('previewInstructor').textContent = `Con ${instructor} • Vista previa gratuita`;
-      document.getElementById('previewSchoolBadge').textContent = school;
+      if (type === 'annual') {
+        btnAnnual.className = 'px-4 py-2 rounded-lg text-xs font-bold bg-lurnedia-gradient text-black transition-all cursor-pointer';
+        btnMonthly.className = 'px-4 py-2 rounded-lg text-xs font-semibold text-gray-400 hover:text-white transition-all cursor-pointer';
+        document.getElementById('priceBasic').textContent = '$19';
+        document.getElementById('periodBasic').textContent = '/mes cobrado anualmente';
+        document.getElementById('priceExpert').textContent = '$24';
+        document.getElementById('periodExpert').textContent = '/mes cobrado anualmente';
+        document.getElementById('priceDuo').textContent = '$34';
+        document.getElementById('periodDuo').textContent = '/mes (2 cuentas Expert)';
+      } else {
+        btnMonthly.className = 'px-4 py-2 rounded-lg text-xs font-bold bg-lurnedia-gradient text-black transition-all cursor-pointer';
+        btnAnnual.className = 'px-4 py-2 rounded-lg text-xs font-semibold text-gray-400 hover:text-white transition-all cursor-pointer';
+        document.getElementById('priceBasic').textContent = '$29';
+        document.getElementById('periodBasic').textContent = '/mes';
+        document.getElementById('priceExpert').textContent = '$39';
+        document.getElementById('periodExpert').textContent = '/mes';
+        document.getElementById('priceDuo').textContent = '$54';
+        document.getElementById('periodDuo').textContent = '/mes (2 cuentas Expert)';
+      }
+    }
 
+    function scrollSuccessCarousel() {
+      const el = document.getElementById('successCarousel');
+      if (!el) return;
+      if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 10) {
+        el.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        el.scrollBy({ left: 340, behavior: 'smooth' });
+      }
+    }
+
+    function toggleFollowBtn(btn) {
+      const following = btn.dataset.following === 'true';
+      btn.dataset.following = following ? 'false' : 'true';
+      btn.textContent = following ? 'Follow' : 'Following';
+      btn.className = following
+        ? 'text-sky-400 hover:underline font-semibold cursor-pointer'
+        : 'text-lurnedia-greenLight hover:underline font-bold cursor-pointer';
+    }
+
+    function togglePostLike(btn, baseNumber, formattedBase = null) {
+      const countEl = btn.querySelector('.like-count');
+      const liked = btn.dataset.liked === 'true';
+      if (!liked) {
+        btn.dataset.liked = 'true';
+        btn.classList.add('text-pink-400');
+        const nextNum = baseNumber + 1;
+        countEl.textContent = formattedBase ? `${nextNum}` : `${nextNum}`;
+      } else {
+        btn.dataset.liked = 'false';
+        btn.classList.remove('text-pink-400');
+        countEl.textContent = formattedBase || `${baseNumber}`;
+      }
+    }
+
+    function copyPostLink(btn) {
+      const original = btn.innerHTML;
+      btn.innerHTML = `<span class="text-lurnedia-greenLight font-bold">✓ Copiado</span>`;
+      setTimeout(() => { btn.innerHTML = original; }, 1400);
+    }
+
+    function openStoryReplies(author, handle) {
+      const modal = document.getElementById('appModal');
+      const content = document.getElementById('modalContent');
+      content.innerHTML = `
+        <div>
+          <span class="text-xs font-bold text-lurnedia-greenLight uppercase tracking-wider">Comunidad Lurnedia</span>
+          <h3 class="text-lg font-extrabold text-white mt-1">Respuestas a ${author} <span class="text-gray-400 font-normal text-xs">${handle}</span></h3>
+          <div class="mt-4 space-y-3 max-h-60 overflow-y-auto pr-1 text-xs">
+            <div class="bg-[#08080A] border border-lurnedia-border rounded-xl p-3">
+              <p class="font-bold text-lurnedia-greenLight mb-1">@estudiante_tech</p>
+              <p class="text-gray-300">¡Qué gran avance! Seguir una ruta paso a paso cambia por completo el ritmo de aprendizaje.</p>
+            </div>
+            <div class="bg-[#08080A] border border-lurnedia-border rounded-xl p-3">
+              <p class="font-bold text-lurnedia-greenLight mb-1">@lurnedia</p>
+              <p class="text-gray-300">¡Felicidades por tu constancia! Seguimos acompañándote en cada proyecto.</p>
+            </div>
+          </div>
+          <button type="button" onclick="closeModal()" class="mt-5 w-full py-2.5 rounded-xl bg-lurnedia-gradient text-black font-extrabold text-xs cursor-pointer">
+            Cerrar
+          </button>
+        </div>
+      `;
       modal.classList.remove('hidden');
       modal.classList.add('flex');
     }
 
-    // =========================================================================
-    // MODAL DE AUTENTICACIÓN (LOGIN / REGISTER)
-    // =========================================================================
-    function openModal(mode = 'login') {
-      authMode = mode === 'register' ? 'register' : 'login';
-      const modal = document.getElementById('authModal');
-      const titleEl = document.getElementById('authModalTitle');
-      const subtitleEl = document.getElementById('authModalSubtitle');
-      const nameField = document.getElementById('registerNameField');
-      const submitBtn = document.getElementById('authSubmitBtn');
-      const switchText = document.getElementById('authSwitchText');
-      const switchBtn = document.getElementById('authSwitchBtn');
+    function toggleFaq(btn) {
+      const card = btn.parentElement;
+      const panel = card.querySelector('.faq-panel');
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = !panel.classList.contains('hidden');
+      panel.classList.toggle('hidden', isOpen);
+      icon.textContent = isOpen ? '+' : '−';
+    }
 
-      if (!modal) return;
+    function openModal(type, prefillEmail = '') {
+      const modal = document.getElementById('appModal');
+      const content = document.getElementById('modalContent');
 
-      if (authMode === 'register') {
-        titleEl.textContent = 'Crea tu cuenta gratis';
-        subtitleEl.textContent = 'Empieza hoy con clases introductorias y rutas guiadas en Lurnedia.';
-        nameField.classList.remove('hidden');
-        submitBtn.textContent = 'Crear mi cuenta';
-        switchText.textContent = '¿Ya tienes una cuenta?';
-        switchBtn.textContent = 'Inicia sesión';
+      if (type === 'login') {
+        content.innerHTML = `
+          <div class="text-center mb-6">
+            <h3 class="text-2xl font-extrabold text-white">Bienvenido de nuevo</h3>
+            <p class="text-xs text-gray-400 mt-1">Ingresa a tu cuenta de Lurnedia</p>
+          </div>
+          <form onsubmit="submitAuthForm(event, 'Sesión iniciada correctamente')" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 mb-1.5">Correo electrónico</label>
+              <input type="email" required placeholder="tu@correo.com" class="w-full bg-[#08080A] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl px-4 py-3 text-sm text-white focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 mb-1.5">Contraseña</label>
+              <input type="password" required placeholder="••••••••" class="w-full bg-[#08080A] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl px-4 py-3 text-sm text-white focus:outline-none" />
+            </div>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-lurnedia-gradient hover:brightness-110 text-black font-extrabold text-sm transition-all cursor-pointer">
+              Iniciar sesión
+            </button>
+          </form>
+          <p class="text-center text-xs text-gray-400 mt-5">
+            ¿Aún no tienes cuenta? <button onclick="openModal('register')" class="text-lurnedia-greenLight font-bold hover:underline cursor-pointer">Regístrate gratis</button>
+          </p>
+        `;
       } else {
-        titleEl.textContent = 'Inicia sesión';
-        subtitleEl.textContent = 'Continúa tus rutas y clases donde lo dejaste.';
-        nameField.classList.add('hidden');
-        submitBtn.textContent = 'Entrar a mi cuenta';
-        switchText.textContent = '¿Aún no tienes cuenta?';
-        switchBtn.textContent = 'Crea una gratis';
+        content.innerHTML = `
+          <div class="text-center mb-6">
+            <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold bg-lurnedia-greenDark/20 text-lurnedia-greenLight mb-2">Comienza hoy</span>
+            <h3 class="text-2xl font-extrabold text-white">Crea tu cuenta gratis</h3>
+            <p class="text-xs text-gray-400 mt-1">Únete a la comunidad de Lurnedia</p>
+          </div>
+          <form onsubmit="submitAuthForm(event, '¡Cuenta creada! Bienvenido a Lurnedia')" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 mb-1.5">Nombre completo</label>
+              <input type="text" required placeholder="Tu nombre completo" class="w-full bg-[#08080A] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl px-4 py-3 text-sm text-white focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 mb-1.5">Correo electrónico</label>
+              <input type="email" required value="${prefillEmail}" placeholder="tu@correo.com" class="w-full bg-[#08080A] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl px-4 py-3 text-sm text-white focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 mb-1.5">Contraseña</label>
+              <input type="password" required placeholder="Mínimo 8 caracteres" class="w-full bg-[#08080A] border border-lurnedia-border focus:border-lurnedia-greenLight rounded-xl px-4 py-3 text-sm text-white focus:outline-none" />
+            </div>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-lurnedia-gradient hover:brightness-110 text-black font-extrabold text-sm transition-all cursor-pointer">
+              Crear mi cuenta en Lurnedia
+            </button>
+          </form>
+          <p class="text-center text-xs text-gray-400 mt-5">
+            ¿Ya tienes cuenta? <button onclick="openModal('login')" class="text-lurnedia-greenLight font-bold hover:underline cursor-pointer">Inicia sesión</button>
+          </p>
+        `;
       }
 
       modal.classList.remove('hidden');
       modal.classList.add('flex');
     }
 
-    function toggleAuthMode() {
-      openModal(authMode === 'login' ? 'register' : 'login');
+    function openCoursePreview(title, teacher, school) {
+      const modal = document.getElementById('appModal');
+      const content = document.getElementById('modalContent');
+      content.innerHTML = `
+        <div>
+          <span class="text-xs font-bold text-lurnedia-greenLight uppercase tracking-wider">${school}</span>
+          <h3 class="text-xl font-extrabold text-white mt-1 mb-2">${title}</h3>
+          <p class="text-xs text-gray-400 mb-5">Dictado por <strong class="text-gray-200">${teacher}</strong></p>
+
+          <div class="bg-[#08080A] border border-lurnedia-border rounded-xl p-4 mb-5 space-y-2.5 text-xs text-gray-300">
+            <p class="font-bold text-white">Lo que aprenderás en este programa:</p>
+            <p>✓ Fundamentos prácticos aplicables a proyectos reales</p>
+            <p>✓ Buenas prácticas de la industria tech actual</p>
+            <p>✓ Certificado digital verificable al aprobar el examen</p>
+          </div>
+
+          <button onclick="openModal('register')" class="w-full py-3.5 rounded-xl bg-lurnedia-gradient hover:brightness-110 text-black font-extrabold text-sm transition-all cursor-pointer">
+            Comenzar primera clase gratis
+          </button>
+        </div>
+      `;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
-    function closeModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (!modal) return;
+    function handleHeroSignup(e) {
+      e.preventDefault();
+      const email = document.getElementById('heroEmailInput').value;
+      openModal('register', email);
+    }
+
+    function handleGoogleQuickStart() {
+      const modal = document.getElementById('appModal');
+      const content = document.getElementById('modalContent');
+      content.innerHTML = `
+        <div class="text-center py-4">
+          <div class="w-14 h-14 rounded-2xl bg-lurnedia-gradient text-black flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold shadow-lg shadow-lurnedia-greenDark/30">
+            L
+          </div>
+          <h3 class="text-xl font-extrabold text-white mb-2">Acceso rápido con Google</h3>
+          <p class="text-xs text-gray-400 mb-6">
+            Conecta tu cuenta de Google para activar tus clases gratuitas y guardar tu progreso en Lurnedia.
+          </p>
+          <button type="button" onclick="submitAuthForm(event, '¡Cuenta vinculada! Bienvenido a Lurnedia')" class="w-full py-3 rounded-xl bg-lurnedia-gradient hover:brightness-110 text-black font-extrabold text-sm transition-all cursor-pointer mb-2.5">
+            Continuar y activar acceso gratis
+          </button>
+          <button type="button" onclick="closeModal()" class="w-full py-2.5 rounded-xl border border-lurnedia-border text-xs font-semibold text-gray-300 hover:text-white cursor-pointer">
+            Cancelar
+          </button>
+        </div>
+      `;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function submitAuthForm(e, msg) {
+      e.preventDefault();
+      const content = document.getElementById('modalContent');
+      content.innerHTML = `
+        <div class="text-center py-6">
+          <div class="w-14 h-14 rounded-full bg-lurnedia-gradient text-black flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold">✓</div>
+          <h3 class="text-xl font-extrabold text-white mb-2">${msg}</h3>
+          <p class="text-xs text-gray-400 mb-6">Ya puedes explorar todas las escuelas, clases en vivo de la tarde y rutas de aprendizaje en Lurnedia.</p>
+          <button onclick="closeModal()" class="px-6 py-2.5 rounded-xl bg-lurnedia-gradient text-black font-bold text-sm cursor-pointer">
+            Continuar explorando
+          </button>
+        </div>
+      `;
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('appModal');
       modal.classList.add('hidden');
       modal.classList.remove('flex');
     }
 
-    function closeModalOnBackdrop(event, modalId) {
-      if (event.target && event.target.id === modalId) {
-        closeModal(modalId);
-      }
-    }
-
-    function handleAuthSubmit(event) {
-      event.preventDefault();
-      const email = document.getElementById('authEmailInput').value.trim();
-      const name = document.getElementById('authNameInput').value.trim();
-
-      closeModal('authModal');
-      document.getElementById('authForm').reset();
-
-      if (authMode === 'register') {
-        showToast(`¡Bienvenido${name ? ', ' + name : ''}! Tu cuenta gratuita (${email}) está lista.`);
-      } else {
-        showToast(`Sesión iniciada como ${email}. ¡Sigamos aprendiendo!`);
-      }
-    }
-
-    // =========================================================================
-    // REGISTRO RÁPIDO DESDE HERO
-    // =========================================================================
-    function handleHeroSignup(event) {
-      event.preventDefault();
-      const input = document.getElementById('heroEmailInput');
-      const email = input ? input.value.trim() : '';
-      if (!email) return;
-
-      if (input) input.value = '';
-      openModal('register');
-      const authEmailInput = document.getElementById('authEmailInput');
-      if (authEmailInput) authEmailInput.value = email;
-      showToast(`Preparamos tu acceso gratuito para ${email}. Completa tu registro.`);
-    }
-
-    // =========================================================================
-    // ALTERNADOR DE FACTURACIÓN (ANUAL / MENSUAL)
-    // =========================================================================
-    function setBilling(mode = 'annual') {
-      const isAnnual = mode === 'annual';
-      const btnAnnual = document.getElementById('btnAnnual');
-      const btnMonthly = document.getElementById('btnMonthly');
-
-      const priceBasic = document.getElementById('priceBasic');
-      const periodBasic = document.getElementById('periodBasic');
-      const priceExpert = document.getElementById('priceExpert');
-      const periodExpert = document.getElementById('periodExpert');
-      const priceDuo = document.getElementById('priceDuo');
-      const periodDuo = document.getElementById('periodDuo');
-
-      if (btnAnnual && btnMonthly) {
-        btnAnnual.className = isAnnual
-          ? 'px-4 py-2 rounded-lg text-xs font-bold bg-lurnedia-gradient text-black transition-all cursor-pointer'
-          : 'px-4 py-2 rounded-lg text-xs font-semibold text-gray-400 hover:text-white transition-all cursor-pointer';
-
-        btnMonthly.className = !isAnnual
-          ? 'px-4 py-2 rounded-lg text-xs font-bold bg-lurnedia-gradient text-black transition-all cursor-pointer'
-          : 'px-4 py-2 rounded-lg text-xs font-semibold text-gray-400 hover:text-white transition-all cursor-pointer';
-      }
-
-      if (isAnnual) {
-        priceBasic.textContent = '$19';
-        periodBasic.textContent = '/mes cobrado anualmente';
-        priceExpert.textContent = '$24';
-        periodExpert.textContent = '/mes cobrado anualmente';
-        priceDuo.textContent = '$34';
-        periodDuo.textContent = '/mes (2 cuentas Expert)';
-      } else {
-        priceBasic.textContent = '$29';
-        periodBasic.textContent = '/mes facturación mensual';
-        priceExpert.textContent = '$37';
-        periodExpert.textContent = '/mes facturación mensual';
-        priceDuo.textContent = '$52';
-        periodDuo.textContent = '/mes (2 cuentas Expert)';
-      }
-    }
-
-    // =========================================================================
-    // NOTIFICACIÓN TOAST
-    // =========================================================================
-    function showToast(message) {
-      const toast = document.getElementById('toastBanner');
-      const toastMsg = document.getElementById('toastMessage');
-      if (!toast || !toastMsg) return;
-
-      toastMsg.textContent = message;
-      toast.classList.remove('hidden');
-      toast.classList.add('flex');
-
-      if (toastTimeoutId) clearTimeout(toastTimeoutId);
-      toastTimeoutId = setTimeout(() => {
-        toast.classList.add('hidden');
-        toast.classList.remove('flex');
-      }, 4200);
-    }
-
-    // =========================================================================
-    // INICIALIZACIÓN Y EVENTOS DE BÚSQUEDA
-    // =========================================================================
-    document.addEventListener('DOMContentLoaded', () => {
-      startPromoCountdown();
-      selectPhoneLesson('ia');
-      renderSchools();
-      renderCourses(COURSES_DATA);
-      setBilling('annual');
-
-      const yearSpan = document.getElementById('currentYear');
-      if (yearSpan) {
-        yearSpan.textContent = String(new Date().getFullYear());
-      }
-
-      const globalSearch = document.getElementById('globalSearchInput');
-      const coursesSearch = document.getElementById('coursesSearchInput');
-
-      if (globalSearch) {
-        globalSearch.addEventListener('input', (e) => {
-          currentSearchQuery = e.target.value;
-          if (coursesSearch && coursesSearch.value !== currentSearchQuery) {
-            coursesSearch.value = currentSearchQuery;
-          }
-          filterCourses(currentCategory);
-        });
-
-        globalSearch.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter') {
-            e.preventDefault();
-            document.getElementById('cursos').scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      }
-
-      if (coursesSearch) {
-        coursesSearch.addEventListener('input', (e) => {
-          currentSearchQuery = e.target.value;
-          if (globalSearch && globalSearch.value !== currentSearchQuery) {
-            globalSearch.value = currentSearchQuery;
-          }
-          filterCourses(currentCategory);
-        });
-      }
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          closeModal('authModal');
-          closeModal('coursePreviewModal');
-        }
-      });
-    });
+    renderSchools();
+    renderLiveClasses('lunes');
+    renderCourses();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
